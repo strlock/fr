@@ -1,0 +1,62 @@
+//4000
+/* ==========================================================================
+   Timeline Widget
+   ========================================================================== */
+
+.th-image-carousel-timeline .slick-slide {
+    /*opacity:0.2;*/
+    transform: scale(0.80, 0.80);
+    transition:all 0.65s ease;
+}
+
+.th-image-carousel-timeline .slick-slide.slick-current {
+    opacity:1;
+    transform: scale(1.0, 1.0);
+}
+
+.th-image-carousel-timeline .slick-slide figcaption {
+    padding-top:14px;
+    opacity:0;
+    transition:all 0.8s ease;
+}
+.th-image-carousel-timeline .slick-current figcaption {opacity:1}
+
+.th-image-carousel-timeline .slick-slide figcaption .th-timeline-title {
+    font-size:20px;
+    display:block;
+}
+.th-image-carousel-timeline .slick-slide figcaption .th-timeline-caption {
+    font-size:15px;
+} 
+
+
+/* Image Carousel Caption */
+.thmv-carousel-caption .swiper-slide figcaption{
+    opacity:0;
+}
+.thmv-carousel-caption .swiper-slide.swiper-slide-next figcaption.elementor-image-carousel-caption{
+    background-color:rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    display: block;
+    position: absolute;
+    bottom: -10%;
+    left:0;
+    right:0;
+    padding:20px;
+    margin:0 20px;
+    opacity:1;
+}
+/* Timeline */
+.th-image-carousel-timeline .slick-slide figcaption {
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.th-image-carousel-timeline .slick-slide figcaption .th-timeline-title {
+    margin-bottom: 6px;
+}
+
+.th-image-carousel-timeline .slick-slide figcaption .th-timeline-caption {
+    opacity: 0.75;
+}

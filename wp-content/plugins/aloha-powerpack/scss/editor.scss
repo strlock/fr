@@ -1,0 +1,86 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 18-Nov-2021, 16:32:54
+    Author     : Abrar
+*/
+
+
+$greenColor: #BAD344;
+$lightGray: #404349;
+$darkBgColor: #34383c;
+.elementor-panel {
+    div[class*=elementor-panel-menu-item-aloha-settings]{
+        background-color: $greenColor;
+        color: white;
+        &:hover{
+            background-color: rgba($greenColor, 0.85);
+        }
+        .eicon-tools:before{
+            color: white;
+        }
+    }
+    .elementor-control-aloha-restore-kit{
+        .elementor-control-input-wrapper{
+            margin: auto!important;
+            button{
+                background-color: #df1f1f;
+            }
+        }
+    }
+}
+
+
+#elementor-controls{
+
+    .themo-elementor-dark-mode &{
+        .elementor-control-th_dynamic_image, 
+        .elementor-control-th_thmv_section_title,
+        .elementor-control-th_section_parallax,
+        .elementor-control-th_dynamic_image{
+            padding-bottom: 0; 
+            .elementor-control-content{
+                padding: 20px 15px 0;
+                background-color: $darkBgColor;
+            }
+        }
+    }
+
+    .elementor-control-th_thmv_section_title{
+        .elementor-control-content{
+            color: $greenColor;
+        }
+    }
+    .elementor-control-th_dynamic_image,.elementor-control-th_section_parallax{
+        .elementor-control-title{
+            font-weight: 600;
+        }
+        .elementor-switch-input:not(:checked){
+            ~.elementor-switch-label{
+                .themo-elementor-dark-mode &{
+                    background-color: $lightGray;
+                }
+
+            }
+        }
+        .elementor-switch-input:checked{
+            ~.elementor-switch-label{
+                background-color: $greenColor;
+            }
+        }
+    }
+    //the last ones have the padding
+    .elementor-control-th_dynamic_image{
+        padding-bottom: 20px!important;
+
+        .elementor-control-content{
+            .themo-elementor-dark-mode &{
+                padding-bottom: 20px;
+            }
+        }
+
+    }
+}

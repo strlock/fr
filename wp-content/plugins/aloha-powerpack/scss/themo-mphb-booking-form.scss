@@ -1,0 +1,275 @@
+@import "partials/mphb_variables";
+@import "partials/datepicker";
+//popup styles copy for overrides
+/* datepick-nav
+*/
+
+// we are using the booked color for 3 more colors
+// but we have to provide those colors to motopress for overriding
+
+//:root .mphb-calendar.mphb-datepick, 
+//:root .mphb-calendar.mphb-datepick [class*="mphb-datepicker-"], 
+//:root .datepick-popup .mphb-datepick-popup, 
+//:root .datepick-popup [class*="mphb-datepicker-"].mphb-datepick-popup{
+    //--mphb-not-available-date-bg: var(--mphb-booked-date-bg);
+    //--mphb-out-of-season-date-bg: var(--mphb-booked-date-bg);
+    //--mphb-unselectable-date-color: var(--mphb-booked-date-bg);
+
+    //--mphb-not-available-date-color: var(--mphb-booked-date-color);
+    //--mphb-out-of-season-date-color: var(--mphb-booked-date-color);
+//}
+
+$mphb-datepick-nav-bg: #e5e7e9;
+/*
+* highlight
+*/
+$mphb-datepick-highlight-bg: 'var(--mphb-selected-date-bg)';
+$mphb-datepick-highlight-color: 'var(--mphb-selected-date-color)';
+
+$mphb-booked-date-bg: 'var(--mphb-booked-date-bg)';
+$mphb-booked-date-color: 'var(--mphb-booked-date-color)';
+/*
+* today
+*/
+$mphb-datepick-datepick-today-bg: 'var(--mphb-available-date-bg)';
+$mphb-datepick-datepick-today-color: 'var(--mphb-available-date-color)';
+/*
+* available date
+*/
+$mphb-available-date-bg: 'var(--mphb-available-date-bg)';
+$mphb-available-date-color: 'var(--mphb-available-date-color)';
+/*
+* not available date
+*/
+$mphb-not-available-date-bg: 'var(--mphb-not-available-date-bg)';
+$mphb-available-not-date-color: 'var(--mphb-not-available-date-color)';
+
+/*
+* selectable date
+*/
+$mphb-selectable-date-bg: 'var(--mphb-available-date-bg)';
+$mphb-selectable-date-color: 'var(--mphb-available-date-color)';
+
+
+body{
+    .mphb-calendar a.datepick-cmd.datepick-cmd-today, .datepick-popup a.datepick-cmd.datepick-cmd-today{
+        color: white;
+    }
+    .mphb-calendar.mphb-datepick, .datepick-popup .mphb-datepick-popup{
+        .datepick-month{
+            td .mphb-available-date{
+                 background-color: #{$mphb-available-date-bg};
+                color: #{$mphb-available-date-color};
+            }
+            td .mphb-available-date.mphb-date-check-out{
+                background: linear-gradient(to bottom right, #{$mphb-booked-date-bg} 0, #{$mphb-booked-date-bg} 50%, #{$mphb-available-date-bg} 50%, #{$mphb-available-date-bg} 100%);
+                &.mphb-later-max-date{
+                    background: linear-gradient(to bottom right, #{$mphb-booked-date-bg} 0, #{$mphb-booked-date-bg} 50%, #{$mphb-not-available-date-bg} 50%, #{$mphb-not-available-date-bg} 100%);
+                }
+            }
+            td .mphb-booked-date{
+                 background-color: #{$mphb-booked-date-bg};
+                color: #{$mphb-booked-date-color};
+            }
+            td .mphb-booked-date.mphb-date-check-in {
+                background: linear-gradient(to bottom right, #{$mphb-available-date-bg} 0, #{$mphb-available-date-bg} 50%, #{$mphb-booked-date-bg} 50%, #{$mphb-booked-date-bg} 100%);
+                .mphb-mark-as-unavailable--check-in.mphb-mark-as-unavailable--check-out{
+                   background: linear-gradient(to bottom right, #{$mphb-not-available-date-bg} 0, #{$mphb-not-available-date-bg} 50%, #{$mphb-booked-date-bg} 50%, #{$mphb-booked-date-bg} 100%);
+                }    
+            } 
+            td .mphb-booked-date:not(.mphb-selectable-date){
+                background-color: #{$mphb-booked-date-bg};
+                color: #{$mphb-booked-date-color};
+            }
+            td a.datepick-highlight.mphb-booked-date.mphb-date-check-in{
+                background: linear-gradient(to bottom right,#{$mphb-datepick-highlight-bg} 0, #{$mphb-datepick-highlight-bg} 50%, #{$mphb-booked-date-bg} 50%, #{$mphb-booked-date-bg} 100%);                
+                color: #{$mphb-datepick-highlight-color}; 
+            }
+        }
+
+    }
+}
+body{
+
+    .mphb-calendar.mphb-datepick, .datepick-popup .mphb-datepick-popup{
+
+        .datepick-nav {
+            background-color: $mphb-datepick-nav-bg;
+            a {
+                color: $mphb-datepick-nav-color;
+                &:hover {
+                    background-color: $mphb-datepick-nav-hover-bg;
+                    color: $mphb-datepick-nav-hover-color;
+                }
+                &.datepick-disabled {
+                    color: $mphb-datepick-nav-disabled-hover-color;
+                    &:hover {
+                        background-color: $mphb-datepick-nav-disabled-hover-bg;
+                    }
+                }
+            }
+        }
+        .datepick-ctrl {
+            background-color: $mphb-datepick-ctrl-bg;
+            a {
+                color: $mphb-datepick-ctrl-a-color;
+            }
+            .datepick-cmd:hover {
+                background-color: $mphb-datepick-ctrl-hover-bg;
+                color: $mphb-datepick-ctrl-hover-color;
+            }
+        }
+
+        a.datepick-cmd.datepick-cmd-today {
+            color:  $mphb-datepick-cmd-today-color;
+        }
+
+        .datepick-month-header {
+            &, & select, & input {
+                background-color: $mphb-datepick-month-header-bg;
+                color: $mphb-datepick-month-header-color;
+            }
+        }
+        .datepick-month {
+            th,
+            th a {
+                background-color: $mphb-datepick-month-th-bg;
+                color: $mphb-datepick-month-th-color;
+                font-weight: normal;
+            }
+            td {
+                background-color: $mphb-datepick-month-td-bg;
+                border: none;
+            }
+            a {
+                background-color: $mphb-datepick-month-a-bg;
+                color: $mphb-datepick-month-a-color;
+            }
+            td span {
+                color: $mphb-datepick-month-span-color;
+            }
+            td .datepick-weekend {
+                background-color: $mphb-datepick-datepick-weekend-bg;
+            }
+        }
+    }
+
+    .mphb-calendar.mphb-datepick,.datepick-popup .mphb-datepick-popup {
+        .datepick-month td {
+            .mphb-available-date {
+                background-color: #{$mphb-available-date-bg};
+                color: #{$mphb-available-date-color};
+            }
+        }
+    }
+
+    .mphb-calendar.mphb-datepick, .datepick-popup .mphb-datepick-popup,.datepick-popup [class*="mphb-datepicker-"].mphb-datepick-popup{
+        .datepick-month td {
+            .datepick-today {
+                background-color: #{$mphb-datepick-datepick-today-bg};
+                color: #{$mphb-datepick-datepick-today-color};
+            }
+            .mphb-booked-date:not(.mphb-selectable-date) {
+                background-color: #{$mphb-booked-date-bg};
+                color: #{$mphb-booked-date-color};
+            }
+            a.datepick-highlight {
+                background: #{$mphb-datepick-highlight-bg};
+                color: #{$mphb-datepick-highlight-color};
+                &.mphb-mark-as-unavailable--check-out{
+                    background: linear-gradient(to top left,#{$mphb-datepick-highlight-bg} 0,#{$mphb-datepick-highlight-bg} 50%,#{$mphb-not-available-date-bg} 50%,#{$mphb-not-available-date-bg} 100%);
+                }
+                &.mphb-mark-as-unavailable--check-in{
+                    background: linear-gradient(to bottom right,#{$mphb-datepick-highlight-bg} 0, #{$mphb-datepick-highlight-bg} 50%, #{$mphb-booked-date-bg} 50%, #{$mphb-booked-date-bg} 100%);                
+                    color: #{$mphb-datepick-highlight-color};
+                }
+            }
+        }
+        .datepick-month td {
+            .mphb-not-stay-in-date:not(.mphb-past-date),
+                .mphb-not-available-date {
+                background: #{$mphb-not-available-date-bg};
+                color: #{$mphb-available-not-date-color};
+            }
+
+            .mphb-past-date {
+                background: #{$mphb-not-available-date-bg};
+                color: #{$mphb-available-not-date-color};
+            }
+            .mphb-earlier-min-date,
+            .mphb-later-max-date {
+                background: #{$mphb-not-available-date-bg};
+                color: #{$mphb-available-not-date-color};
+            }
+            .mphb-selectable-date {
+                background-color: #{$mphb-selectable-date-bg};
+                color: #{$mphb-selectable-date-color};
+            }
+            .datepick-selected {
+                background: #{$mphb-datepick-highlight-bg}!important;
+                color: #{$mphb-datepick-highlight-color}!important;;
+            }
+
+        }
+
+        
+        &.mphb-check-in-datepick {
+            .datepick-month td {
+                .mphb-not-check-in-date:not(.mphb-past-date) {
+                    background-color: #{$mphb-not-available-date-bg};
+                    color: #{$mphb-available-not-date-color};
+                }
+            }
+        }
+
+        &.mphb-check-out-datepick {
+            .datepick-month td {
+                .mphb-not-check-out-date:not(.mphb-past-date) {
+                    background-color: #{$mphb-not-available-date-bg};
+                    color: #{$mphb-available-not-date-color};
+                }
+                span.mphb-check-in-date:not(.mphb-past-date) {
+                    background:none;
+                    background-color: #{$mphb-datepick-highlight-bg};//$mphb-check-in-date-bg;
+                    color: #{$mphb-datepick-highlight-color};//$mphb-check-in-date-color;
+                }
+            }
+
+        }
+    }
+
+    //additional custom overrides
+
+    .mphb-calendar.mphb-datepick, .datepick-popup .mphb-datepick-popup, .datepick-popup [class*="mphb-datepicker-"].mphb-datepick-popup{
+        .datepick-month td {
+            .mphb-booked-date {
+                background-color: #{$mphb-booked-date-bg};
+                &.mphb-date-check-in.mphb-date-check-out {
+                    /*background-color: #{$mphb-booked-date-bg};*/
+                    background: linear-gradient(to bottom right, #{$mphb-booked-date-bg} 0, #{$mphb-booked-date-bg} 50%, #{$mphb-booked-date-bg} 50%, #{$mphb-booked-date-bg} 100%);
+                }
+                &.mphb-date-check-in {
+                    background: linear-gradient(to bottom right, #{$mphb-available-date-bg} 0, #{$mphb-available-date-bg} 50%, #{$mphb-booked-date-bg} 50%, #{$mphb-booked-date-bg} 100%);
+                }
+            }
+            .mphb-available-date {
+                &.mphb-date-check-out {
+                    background: linear-gradient(to bottom right, #{$mphb-booked-date-bg} 0, #{$mphb-booked-date-bg} 50%, #{$mphb-available-date-bg} 50%, #{$mphb-available-date-bg} 100%);    
+                    &.datepick-highlight {
+                        background: linear-gradient(to bottom right, #{$mphb-booked-date-bg} 0, #{$mphb-booked-date-bg} 50%, #{$mphb-datepick-highlight-bg} 50%, #{$mphb-datepick-highlight-bg} 100%);
+                    }
+                }
+            }
+            .mphb-earlier-min-date{
+                &.mphb-available-date.mphb-date-check-out{
+                    background: linear-gradient(to bottom right, #{$mphb-booked-date-bg} 0, #{$mphb-booked-date-bg} 50%, #{$mphb-not-available-date-bg} 50%, #{$mphb-not-available-date-bg} 100%);
+                }
+                &.mphb-booked-date.mphb-date-check-in{
+                    background: linear-gradient(to bottom right, #{$mphb-not-available-date-bg} 0, #{$mphb-not-available-date-bg} 50%, #{$mphb-booked-date-bg} 50%, #{$mphb-booked-date-bg} 100%);
+                }
+            }
+        }
+    }
+
+}
+

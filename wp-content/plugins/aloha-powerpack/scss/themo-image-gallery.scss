@@ -1,0 +1,55 @@
+.elementor-widget-themo-image-gallery{
+    /* ==========================================================================
+        Image Gallery Widget
+       ========================================================================== */
+
+    .elementor-section-full_width &{
+        .elementor-image-gallery .gallery {
+            width: calc(100% - 30px);
+            margin:0 auto;
+        }
+    }
+
+    .row.gallery-row {padding:15px 0}
+
+    .gallery .img-thumbnail {
+        padding:0;
+        border:0;
+        border-radius:0;
+        margin:0 auto;
+    }
+
+    .gallery a.img-thumbnail {
+        -webkit-transition:all 0.25s linear;
+        -moz-transition:all 0.25s linear;
+        transition:all 0.25s linear;
+    }
+    .gallery a.img-thumbnail:hover {opacity:0.7}
+
+    .gallery .gallery-text {
+        text-align:center;
+        overflow:hidden;
+        background:#fff;
+        padding:20px 20px 10px;
+        border:1px solid #e4e4e4;
+        border-top:0;
+    }
+
+    .gallery .image-title {
+        color:#515151;
+        font-size:18px;
+        font-weight:600;
+        margin-bottom:10px;
+    }
+    .gallery .caption {
+        color:#5c5c5c;
+        margin-bottom:10px;
+    }
+
+    @media (max-width:767px) {
+        .row.gallery-row {padding:0}
+
+        .row.gallery-row > div {margin:15px auto}
+    }
+
+}

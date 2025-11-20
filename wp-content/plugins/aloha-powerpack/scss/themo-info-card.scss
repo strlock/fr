@@ -1,0 +1,52 @@
+//4040
+/* ==========================================================================
+        Info Card Widget
+       ========================================================================== */
+
+.th-info-card-wrap {
+    padding:20px;
+    border-radius:5px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.06), 0 0 8px 0 rgba(0, 0, 0, 0.10);
+}
+
+.th-info-card-wrap .elementor-icon-box-wrapper {
+    padding:60px 45px;
+}
+
+.th-info-card-wrap .elementor-icon-box-title {
+/*    font-size:28px;
+    color: var(--e-global-color-thmv_primary);
+    margin:0 0 20px;*/
+    margin-top: 0;
+}
+
+.th-info-card-wrap .elementor-icon-box-description {
+    color:#5c5c5c;
+    white-space:pre-line;
+}
+
+.th-info-card-wrap .th-btn-wrap {
+    margin-top:25px;
+}
+
+.th-info-card-wrap .th-btn-wrap a {
+    display:block;
+    color:#3f3f3f;
+    font-weight:600;
+    text-transform:uppercase;
+    text-decoration:none;
+}
+.th-info-card-wrap .th-btn-wrap a:after {
+    font: normal normal normal 14px/1 FontAwesome;
+    content:"\f061";
+    margin-left:5px;
+}
+.th-info-card-wrap .th-btn-wrap a:hover {opacity:0.7}
+
+.th-info-card-wrap .th-btn-wrap .th-btn-2 {margin-top:6px}
+
+
+@media (max-width:767px) {
+    .th-info-card-wrap {padding:30px}
+}
+

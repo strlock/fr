@@ -1,0 +1,522 @@
+//line 25 of app.css
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+.flex-container a:active,.flex-container a:focus,.flexslider a:active,.flexslider a:focus{outline:0} .flex-control-nav,.flex-direction-nav,.slides{margin:0;padding:0;list-style:none} @font-face{font-family:flexslider-icon;src:url(../assets/fonts/flexslider-icon.eot);src:url(../assets/fonts/flexslider-icon.eot?#iefix) format('embedded-opentype'),url(../assets/fonts/flexslider-icon.woff) format('woff'),url(../assets/fonts/flexslider-icon.ttf) format('truetype'),url(../assets/fonts/flexslider-icon.svg#flexslider-icon) format('svg');font-weight:400;font-style:normal} .flexslider{margin:0;padding:0} .flexslider .slides>li{display:none;-webkit-backface-visibility:hidden} .flexslider .slides img{width:100%;display:block} .flex-pauseplay span{text-transform:capitalize} .slides:after{content:"\0020";display:block;clear:both;visibility:hidden;line-height:0;height:0} html[xmlns] .slides{display:block} * html .slides{height:1%} .no-js .slides>li:first-child{display:block} .flexslider{position:relative;zoom:1} .flex-viewport{max-height:2000px;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;transition:all 1s ease} .loading .flex-viewport{max-height:300px} .flexslider .slides{zoom:1} .carousel li{margin-right:5px} .flex-direction-nav a{text-decoration:none;display:block;width:40px;height:40px;margin:-20px 0 0;position:absolute;top:50%;z-index:10;overflow:hidden;opacity:0;cursor:pointer;color:rgba(255,255,255,1);-webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease} .flex-direction-nav .flex-prev{left:-50px} .flex-direction-nav .flex-next{right:-50px;text-align:right} .flexslider:hover .flex-prev{opacity:.7;left:10px} .flexslider:hover .flex-next{opacity:.7;right:10px} .flexslider:hover .flex-next:hover,.flexslider:hover .flex-prev:hover{opacity:1} .flex-direction-nav .flex-disabled{opacity:0!important;filter:alpha(opacity=0);cursor:default} .flex-direction-nav a:before{font-family:flexslider-icon;font-size:40px;line-height:40px;display:inline-block;content:'\f001'} .flex-direction-nav a.flex-next:before{content:'\f002'} .flex-pauseplay a{display:block;width:20px;height:20px;position:absolute;bottom:5px;left:10px;opacity:.8;z-index:10;overflow:hidden;cursor:pointer;color:#000} .flex-pauseplay a:before{font-family:flexslider-icon;font-size:20px;display:inline-block;content:'\f004'} .flex-pauseplay a:hover{opacity:1} .flex-pauseplay a.flex-play:before{content:'\f003'} .flex-control-nav{width:100%;position:absolute;bottom:-40px;text-align:center} .flex-control-nav li{margin:0 6px;display:inline-block;zoom:1} .flex-control-paging li a{width:11px;height:11px;display:block;background:rgba(255,255,255,0.5);cursor:pointer;text-indent:-9999px;-webkit-border-radius:20px;-moz-border-radius:20px;-o-border-radius:20px;border-radius:20px;} .flex-control-paging li a:hover{background:#fff;} .flex-control-paging li a.flex-active{background:#fff;cursor:default} .flex-control-thumbs{margin:5px 0 0;position:static;overflow:hidden} .flex-control-thumbs li{width:25%;float:left;margin:0} .flex-control-thumbs img{width:100%;display:block;opacity:.7;cursor:pointer} .flex-control-thumbs img:hover{opacity:1} .flex-control-thumbs .flex-active{opacity:1;cursor:default} @media screen and (max-width:860px){.flex-direction-nav .flex-prev{opacity:1;left:10px} .flex-direction-nav .flex-next{opacity:1;right:10px} } 
+
+//1028
+#main-flex-slider .btn.dropdown-toggle,
+#main-flex-slider .dropdown-menu li a {margin-bottom:0}
+
+//1694
+/*     body.single .flexslider {margin-bottom:20px}*/
+
+//5340
+
+
+#main-flex-slider {
+    background:transparent;
+}
+
+#main-flex-slider .slider-bg {display:flex; flex-direction: column;}
+
+#main-flex-slider .th-slide-wrap,
+#main-flex-slider .th-slider-overlay,
+#main-flex-slider .has-image-bg {
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+#main-flex-slider .th-slide-inner {
+    height:100%;
+    flex:1 0 100%;
+}
+
+#main-flex-slider .th-slide-inner {
+    display:flex;
+    padding:40px;
+}
+
+#main-flex-slider .th-slide-content {width:100%}
+
+.th-slide-inner.th-left {text-align:left}
+.th-slide-inner.th-centered {text-align:center}
+.th-slide-inner.th-right {text-align:right}
+
+#main-flex-slider .slides img {
+    width:auto;
+    max-width:100%;
+}
+
+#main-flex-slider .slides .slider-title {
+    margin-top: 0;
+}
+
+/*
+#main-flex-slider .slides h1 {
+    font-size:44px;
+    font-weight:300;
+    color:var(--e-global-color-thmv_primary);
+    margin-bottom:20px;
+}*/
+
+#main-flex-slider .slider-subtitle p {
+    font-size:22px;
+    font-weight:300;
+    color:#2e2e2e;
+    margin-bottom:30px;
+}
+
+#main-flex-slider .th-btn {margin:8px 5px;}
+
+#main-flex-slider .th-btn:not(.btn-cta-primary):not(.btn-cta-accent) {
+    font-size:17px;
+    padding:12px 38px;
+}
+#main-flex-slider .btn-cta-primary,
+#main-flex-slider .btn-cta-accent {padding:12px 50px}
+
+#main-flex-slider .slides .btn-image img {display:inline}
+
+#main-flex-slider .slides .btn-image {
+    display:inline-block;
+    padding:0 !important;
+}
+
+#main-flex-slider .slides .hero {margin:20px auto}
+
+#main-flex-slider .th-left .hero {margin-left:0}
+#main-flex-slider .th-right .hero {margin-right:0}
+
+.flex-direction-nav a {
+    width:60px;
+    height:60px;
+    background-color:#111;
+    padding:0 !important;
+    margin-top:-30px;
+    overflow:visible;
+    border-radius:5px;
+}
+.flex-direction-nav a:before {
+    font-family: "themovation-icons" !important;
+    font-size:22px;
+    line-height:60px;
+}
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover {opacity:0.65; color:#fff}
+
+.flex-direction-nav .flex-next:before {content:"c" !important}
+.flex-direction-nav .flex-prev:before {content:"a" !important}
+
+.flex-direction-nav .flex-prev {
+    opacity:0.1;
+    left:0;
+    text-align:center;
+    border-bottom-left-radius:0;
+    border-top-left-radius:0;
+}
+.flexslider:hover .flex-prev {
+    opacity:0.35;
+    left:0;
+}
+
+.flex-direction-nav .flex-next {
+    opacity:0.1;
+    right:0;
+    text-align:center;
+    border-bottom-right-radius:0;
+    border-top-right-radius:0;
+}
+.flexslider:hover .flex-next {
+    opacity:0.35;
+    right:0;
+}
+
+#main-flex-slider .flex-control-nav {
+    bottom:20px;
+    z-index:5;
+}
+
+#main-flex-slider .slider-scroll-down + .flex-control-nav {
+    text-align:right;
+    padding-right:20px;
+}
+#main-flex-slider .slider-scroll-down + .flex-control-nav li a {color:transparent}
+
+//5343
+/* Slider Scroll Down Arrow */
+
+a.slider-scroll-down {
+    width:50px;
+    height:50px;
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    display:block;
+    margin-left:-25px;
+    color:#fff;
+    font-size:25px;
+    line-height:54px;
+    text-align:center;
+    text-decoration:none;
+    opacity:0.6;
+    border-radius:50em;
+    z-index:1000;
+    transition:all 0.2s ease-in-out;
+}
+.slider-scroll-down:hover {
+    color:#fff;
+    opacity:1;
+    text-decoration:none;
+    transform: translate(0,8px);
+}
+
+//5345
+/* Slider Form - Inline */
+
+#main-flex-slider .th-conversion {
+    padding-top:40px;
+    padding-bottom:20px;
+}
+
+#main-flex-slider .th-conversion form input {border-color:#ababab}
+
+#main-flex-slider .th-conversion form input[type=submit],
+#main-flex-slider .th-conversion .with_frm_style input[type=submit] {border-color:rgba(0, 0, 0, 0.1)}
+
+#main-flex-slider .th-conversion .frm_message p {
+    font-size:14px;
+    color:#468847;
+    margin-bottom:0;
+}
+//5358
+/* Slider Form - Stacked */
+
+#main-flex-slider .th-form-stacked {
+    width:100%;
+    padding:25px;
+    margin:20px auto 0;
+}
+#main-flex-slider .th-form-bg.th-light-bg .th-form-stacked {background:rgba(255,255,255,0.3)}
+#main-flex-slider .th-form-bg.th-dark-bg .th-form-stacked {background:rgba(0,0,0,0.2)}
+
+#main-flex-slider .th-form-bg .th-form-stacked fieldset {padding-bottom:0 !important}
+
+#main-flex-slider .th-form-stacked form,
+#main-flex-slider .th-form-stacked form input,
+#main-flex-slider .th-form-stacked form textarea,
+#main-flex-slider .th-form-stacked form .frm_submit,
+#main-flex-slider .th-form-stacked .frm_error_style {
+    /*  width:400px !important;  */
+    width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+
+#main-flex-slider .th-form-stacked form input {margin:0 !important}
+#main-flex-slider .th-form-stacked form textarea {margin-bottom:-5px !important}
+
+#main-flex-slider .th-form-stacked .with_frm_style form {text-align:left}
+#main-flex-slider .th-form-stacked .frm_error {
+    position:relative;
+    left:0;
+    bottom:0;
+}
+
+
+/* Slider Booked Calendar */
+
+#main-flex-slider .booked-cal-sm {
+    max-width:400px;
+    margin:35px auto 0;
+}
+
+#main-flex-slider .slider-title + .booked-cal-sm {margin-top:50px}
+
+#main-flex-slider .booked-calendarSwitcher p {
+    line-height:1;
+    font-size:14px;
+    margin-top:2px;
+    margin-bottom:0 !important;
+    font-weight:normal;
+}
+@media (max-width:479px) {
+
+    /* Main Slider */
+    #main-flex-slider p,
+    #main-flex-slider .lrg-txt p {
+        font-size:20px;
+        line-height:22px;
+    }
+    #main-flex-slider .slides p {margin-bottom:20px}
+    #main-flex-slider .slides a {margin-bottom:10px}
+    #main-flex-slider .th-conversion {
+        padding-top:20px;
+        padding-bottom:10px;
+    }
+    #main-flex-slider .flex-direction-nav {display:none}
+
+    /*#main-flex-slider .col-sm-6 .th-conversion/*.th-form-bg {padding:20px}*/
+}
+
+
+//1950
+table.booked-calendar input[type=submit],
+table.booked-calendar button,
+/* Calendar Styles */
+
+table.booked-calendar {
+    background-color:#fff;
+    border:1px solid #ddd;
+    border-bottom:0;
+}
+
+table.booked-calendar thead,
+table.booked-calendar tr.days {text-transform:none}
+
+table.booked-calendar thead th {letter-spacing:normal !important;}
+
+table.booked-calendar .monthName {color:#353c40}
+table.booked-calendar .monthName .backToMonth {color:#353c40; opacity:0.6}
+table.booked-calendar .monthName .backToMonth:hover {color:#353c40; opacity:1}
+
+table.booked-calendar tr.days th {color:#8d9093 !important}
+
+table.booked-calendar td {
+    /*	max-height:94px !important; */
+    border:1px solid #ddd;
+    border-left:0 !important;
+    border-right:0 !important;
+}
+
+table.booked-calendar td:hover .date {background:#fff}
+table.booked-calendar td:hover .date .number {
+    color:#000;
+    background:#f9f9f9;
+}
+
+table.booked-calendar td.prev-date .date,
+table.booked-calendar td.prev-date:hover .date,
+table.booked-calendar td.blur .date,
+table.booked-calendar td.blur:hover .date,
+table.booked-calendar td.next-month .date,
+table.booked-calendar td.next-month:hover .date,
+table.booked-calendar td.prev-month .date,
+table.booked-calendar td.prev-month:hover .date {background:#fff !important}
+
+table.booked-calendar td.next-month:hover .date .number,
+table.booked-calendar td.prev-month:hover .date .number {color:#000}
+
+table.booked-calendar td.blur:hover .date .number,
+table.booked-calendar td.prev-date:hover .date .number {background:transparent !important}
+
+table.booked-calendar td.prev-date .date,
+table.booked-calendar td.prev-date:hover .date {color:#d0d0d0}
+
+table.booked-calendar td.blur .date,
+table.booked-calendar td.blur:hover .date {color:#e4e4e4}
+
+table.booked-calendar td.today .date {
+    background:#fff;
+}
+table.booked-calendar td.today:hover .date {
+    background:#fff;
+    color:#333;
+}
+table.booked-calendar td.today .date .number,
+table.booked-calendar td.today.prev-date .date .number {
+    color:#6c6c6c !important;
+    background:#e3f2f9;
+    border:0;
+}
+table.booked-calendar td.today:hover .date .number {
+    background:#d4edf8 !important;
+    color:#000 !important;
+}
+table.booked-calendar td.today.prev-date:hover .date {color:#6c6c6c}
+
+table.booked-calendar td.booked .date,
+table.booked-calendar td.booked:hover .date {
+    background:#fff !important;
+}
+table.booked-calendar td.booked .date .number,
+table.booked-calendar td.booked:hover .date .number {background:#ffefed !important}
+
+table.booked-calendar td.today.booked .date {color:#f0b1a1}
+
+
+/* Small Calendar */
+
+body .booked-calendar-wrap.small table.booked-calendar td:hover .date {background:#fff}
+body .booked-calendar-wrap.small table.booked-calendar td:hover .date .number {background:#f9f9f9}
+
+body .booked-calendar-wrap.small table.booked-calendar td.prev-date .date,
+body .booked-calendar-wrap.small table.booked-calendar td.prev-date:hover .date,
+body .booked-calendar-wrap.small table.booked-calendar td.blur .date,
+body .booked-calendar-wrap.small table.booked-calendar td.blur:hover .date {background:#fff}
+
+body .booked-calendar-wrap.small table.booked-calendar td.blur:hover .date .number,
+body .booked-calendar-wrap.small table.booked-calendar td.prev-date:hover .date .number {background:transparent}
+
+body .booked-calendar-wrap.small table.booked-calendar td.today .date {
+    background:#fff;
+    color:#6c6c6c;
+}
+body .booked-calendar-wrap.small table.booked-calendar td.today:hover .date {
+    background:#fff;
+    color:#333;
+}
+body .booked-calendar-wrap.small table.booked-calendar td.today .date .number {background:#e3f2f9}
+body .booked-calendar-wrap.small table.booked-calendar td.today:hover .date .number { background:#e3f2f9}
+body .booked-calendar-wrap.small table.booked-calendar td.today.prev-date:hover .date {color:#6c6c6c}
+
+body .booked-calendar-wrap.small table.booked-calendar td.booked .date {
+    background:#fff;
+}
+body .booked-calendar-wrap.small table.booked-calendar td.booked:hover .date {background:#fff}
+body .booked-calendar-wrap.small table.booked-calendar td.booked .date .number {background:#ffeae7}
+body .booked-calendar-wrap.small table.booked-calendar td.booked:hover .date .number { background:#ffeae7}
+
+body .booked-calendar-wrap.small table.booked-calendar td.today.booked .date {color:#f0b1a1}
+
+
+/* Custom */
+/*
+body .booked-calendar-wrap.small table.booked-calendar td .date .number {
+        width:25px;
+        height:25px;
+        line-height:25px;
+        -moz-border-radius:25px;
+        -webkit-border-radius:25px;
+        border-radius:25px;
+} */
+
+table.booked-calendar .fa.fa-arrow-right,
+table.booked-calendar .fa.fa-arrow-left,
+table.booked-calendar .booked-icon-arrow-right,
+table.booked-calendar .booked-icon-arrow-left {
+    font-family:"themovation-icons" !important;
+    font-style:normal !important;
+    font-weight:normal !important;
+    font-variant:normal !important;
+    text-transform:none !important;
+    speak:none;
+    line-height:1;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    color:#353c40;
+}
+table.booked-calendar .fa.fa-arrow-left:before,
+table.booked-calendar .booked-icon-arrow-left:before {content:"a"}
+
+table.booked-calendar .fa.fa-arrow-right:before,
+table.booked-calendar .booked-icon-arrow-right:before {content:"c"}
+
+table.booked-calendar .fa.fa-spin,
+table.booked-calendar .booked-icon-spin {color:#6f6f6f}
+
+body .booked-calendarSwitcher.calendar {
+    background:#e5e7e9 !important;
+    color:#414141 !important;
+    margin-bottom:1px;
+    border:1px solid #ddd;
+    border-bottom:0;
+    -moz-border-radius:3px 3px 0 0;
+    -webkit-border-radius:3px 3px 0 0;
+    border-radius:3px 3px 0 0;
+}
+body .booked-calendarSwitcher.calendar p i.fa,
+body .booked-calendarSwitcher.calendar p i.booked-icon-calendar {color:#414141 !important}
+body .booked-calendarSwitcher.calendar select {background:#e5e7e9 !important; color:#414141 !important; -moz-appearance: none;}
+
+body .booked-calendarSwitcher.calendar p {line-height:1.15}
+
+body .booked-calendarSwitcher.calendar p:before {
+    top:auto;
+    bottom:0;
+    color:#444;
+    font-size:15px;
+    z-index:5;
+}
+
+.cal-tooltip + .booked-calendar-shortcode-wrap .booked-calendarSwitcher {margin-top:20px}
+
+
+/**** Default & Custom Color Overrides */
+
+/* Light Color */
+
+table.booked-calendar thead,
+table.booked-calendar thead th
+{background:#e5e7e9 !important}
+
+table.booked-calendar th
+{border-color:#e5e7e9 !important}
+
+body #booked-profile-page input[type=submit].button-primary:hover,
+table.booked-calendar input[type=submit].button-primary:hover,
+body .booked-modal input[type=submit].button-primary:hover,
+table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,
+body #booked-profile-page .booked-profile-appt-list .appt-block .google-cal-button .atcb-link,
+body #booked-profile-page .booked-profile-header
+{background:#434a4d !important}
+
+body #booked-profile-page input[type=submit].button-primary:hover,
+table.booked-calendar input[type=submit].button-primary:hover,
+body .booked-modal input[type=submit].button-primary:hover,
+table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,
+body #booked-profile-page .booked-profile-appt-list .appt-block .google-cal-button .atcb-link,
+body #booked-profile-page .booked-profile-header
+{border-color:#434a4d !important}
+
+
+/* Dark Color */
+
+table.booked-calendar thead tr.days th,
+table.booked-calendar tr.days
+{background:#f1f3f4 !important}
+
+table.booked-calendar tr.days th
+{border-color:#f1f3f4 !important}
+
+
+/* Primary Button Color */
+
+body #booked-profile-page input[type=submit].button-primary,
+table.booked-calendar input[type=submit].button-primary,
+body .booked-modal input[type=submit].button-primary,
+table.booked-calendar .booked-appt-list .timeslot .timeslot-people button,
+body #booked-profile-page .booked-profile-appt-list .appt-block.approved .status-block
+{background:#F5BE58 !important}
+
+body #booked-profile-page input[type=submit].button-primary,
+table.booked-calendar input[type=submit].button-primary,
+body .booked-modal input[type=submit].button-primary,
+table.booked-calendar .booked-appt-list .timeslot .timeslot-people button
+{border-color:#F5BE58 !important}
+
+.booked-modal p.booked-title-bar {background:#afafaf !important}
+
+
+/* Custom Color Additions */
+
+table.booked-calendar th {border-color:#ddd !important}
+
+table.booked-calendar tr.days {border:1px solid #ddd; border-top:0; border-bottom:0;}
+
+table.booked-calendar tr.days th {border:0 !important}
+
+table.booked-calendar .booked-appt-list .timeslot .timeslot-people button[disabled],
+table.booked-calendar .booked-appt-list .timeslot .timeslot-people button[disabled]:hover {
+    background:#eee !important;
+    border-color:#ddd !important;
+    color:#aaa !important;
+}

@@ -1,0 +1,113 @@
+# Translation of Plugins - Simple Page Ordering - Stable (latest release) in German
+# This file is distributed under the same license as the Plugins - Simple Page Ordering - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-11-20 07:33:31+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - Simple Page Ordering - Stable (latest release)\n"
+
+#. translators: %s: sibling page/post title
+#: class-simple-page-ordering.php:465
+msgid "Move under %s"
+msgstr "Verschiebe unter %s"
+
+#. translators: %s: parent page/post title
+#: class-simple-page-ordering.php:430
+msgid "Move out from under %s"
+msgstr "Verschieben weg von unterhalb %s"
+
+#: class-simple-page-ordering.php:78 class-simple-page-ordering.php:124
+msgid "You are not allowed to edit this item."
+msgstr "Du bist nicht berechtigt, dieses Element zu bearbeiten."
+
+#. translators: %1$s is replaced with the post type name
+#: class-simple-page-ordering.php:379
+msgid "Reset %1$s order"
+msgstr "Reihenfolge %1$s zurücksetzen"
+
+#. translators: %1$s is replaced with the post type name
+#: class-simple-page-ordering.php:343
+msgid "Are you sure you want to reset the ordering of the \"%1$s\" post type?"
+msgstr "Bust Du sicher, dass Du die Reihenfolge des Beitragstyps „%1$s“ zurücksetzen möchtest?"
+
+#: 10up-lib/wp-compat-validation-tool/src/Validator.php:152
+msgid "%s error:"
+msgstr "%s Fehler:"
+
+#: 10up-lib/wp-compat-validation-tool/src/Validator.php:127
+msgid "The maximum PHP version supported is %s"
+msgstr "Die maximal unterstützte PHP-Version ist %s"
+
+#: 10up-lib/wp-compat-validation-tool/src/Validator.php:121
+msgid "The minimum PHP version required is %s"
+msgstr "Die erforderliche Mindestversion von PHP ist %s"
+
+#: class-simple-page-ordering.php:859
+msgid "This post type is not sortable."
+msgstr "Dieser Beitrags-Typ kann nicht sortiert werden."
+
+#: class-simple-page-ordering.php:817
+msgid "Array of IDs we want to exclude"
+msgstr "Liste der IDs, die ausgeschlossen werden sollen"
+
+#: class-simple-page-ordering.php:811
+msgid "Index we start with when sorting"
+msgstr "Index, mit dem wir beim Sortieren beginnen"
+
+#: class-simple-page-ordering.php:805
+msgid "ID of item we want to be next to after sorting"
+msgstr "ID des Elements, neben dem wir nach dem Sortieren sein wollen"
+
+#: class-simple-page-ordering.php:800
+msgid "ID of item we want to be previous to after sorting"
+msgstr "ID des Elements, bevor dem wir nach dem Sortieren sein wollen"
+
+#: class-simple-page-ordering.php:794
+msgid "ID of item we want to sort"
+msgstr "ID des Elements, das wir sortieren möchten"
+
+#. Author of the plugin
+#: simple-page-ordering.php
+msgid "10up"
+msgstr "10up"
+
+#: class-simple-page-ordering.php:354
+msgid "It looks like you are using a development copy of <strong>Simple Page Ordering</strong>. Please run <code>npm i; npm run build</code> to create assets."
+msgstr "Anscheinend verwendest Du eine Entwicklungsversion von <strong>Simple Page Ordering</strong>. Bitte führen <code>npm i; npm run build</code> aus, um Assets zu erstellen."
+
+#: class-simple-page-ordering.php:564 class-simple-page-ordering.php:879
+msgid "Missing mandatory parameters."
+msgstr "Erforderliche Parameter fehlen."
+
+#. Author URI of the plugin
+#: simple-page-ordering.php
+msgid "https://10up.com"
+msgstr "https://10up.com"
+
+#. Plugin URI of the plugin
+#: simple-page-ordering.php
+msgid "http://10up.com/plugins/simple-page-ordering-wordpress/"
+msgstr "http://10up.com/plugins/simple-page-ordering-wordpress/"
+
+#. Plugin Name of the plugin
+#: simple-page-ordering.php class-simple-page-ordering.php:373
+msgid "Simple Page Ordering"
+msgstr "Simple Page Ordering"
+
+#. Description of the plugin
+#: simple-page-ordering.php
+msgid "Order your pages and hierarchical post types using drag and drop on the built in page list. For further instructions, open the \"Help\" tab on the Pages screen."
+msgstr "Ordne deine Seite und hierarchischen Inhaltstypen mittels Drag & Drop in der Seitenliste von WordPress. Für weitere Anleitungen öffne den „Hilfe“-Tab in der Ansicht „Seiten“."
+
+#: class-simple-page-ordering.php:762
+msgid "Sort by Order"
+msgstr "Nach Reihenfolge sortieren"
+
+#: class-simple-page-ordering.php:376
+msgid "To reposition an item, simply drag and drop the row by \"clicking and holding\" it anywhere (outside of the links and form controls) and moving it to its new position."
+msgstr "Um ein Element neu zu positionieren, verschiebe die entsprechende Zeile einfach mit Drag&Drop, indem du sie anklickst und angeklickt hältst, sie dann zur neuen Position (außerhalb der Links und Formularelemente) bewegst und los lässt."

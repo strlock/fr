@@ -1,0 +1,67 @@
+/* ==========================================================================
+    Map Widget
+   ========================================================================== */
+
+.th-google-map {
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+.th-gmap-wrap {position:relative}
+
+.map-info {
+    position:absolute;
+    top:50px;
+    left:15px;
+    z-index:2;
+    min-width:290px;
+    background:#fff;
+    padding:45px 50px;
+    border-radius:5px;
+    box-shadow: 0px 0px 30px 0px rgba(71,71,71,0.08);
+}
+
+.map-info:before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+}
+
+.map-info h3 {
+/*    font-size:22px;
+    color:#252627;
+    margin:0 0 20px;*/
+    margin-top: 0;
+}
+
+.map-info .th-gmap-address p,
+.map-info .th-gmap-hoursop p {font-weight:500}
+
+.map-info .th-gmap-hoursop p {font-size:14px}
+
+.map-info .th-gmap-links {margin-top:25px}
+
+.map-info .th-gmap-links a {
+    font-size:14px;
+    color:#9D9684;
+    font-weight:600;
+    text-transform:uppercase;
+    text-decoration:none;
+    padding-right:20px;
+    margin-top:5px
+}
+.map-info .th-gmap-links a:last-child {padding-right:0}
+
+@media (max-width:400px) {
+    .map-info {
+        top:20px;
+        left:20px;
+        min-width:0;
+    }
+}
+

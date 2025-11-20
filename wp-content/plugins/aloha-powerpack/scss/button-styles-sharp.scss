@@ -1,0 +1,20 @@
+@import "variables";
+// button styles
+div[class*='elementor-widget-themo']{
+
+    /** sharp **/
+    .simple-conversion form input[type=submit],.simple-conversion .with_frm_style input[type=submit],.search-form input{
+        @include border-radius(0!important);
+    }
+    .nav-tabs > li > a{
+        @include border-radius(0!important);
+    }
+    .btn, .btn-cta, .btn-sm,.btn-group-sm > .btn, .btn-group-xs > .btn, .pager li > a,.pager li > span, .form-control, #respond input[type=submit], body .booked-modal button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce div.product form.cart .button, .search-form input, .search-submit, .th-accent, .headhesive--clone.banner[data-transparent-header="true"] .th-accent, .th-info-card-wrap, .th-pkg-info, .map-info, .mas-blog-post .post-inner, .mas-blog-post img, .flex-direction-nav a, .widget .tagcloud a, .woocommerce form select, .woocommerce-cart select, .woocommerce nav.woocommerce-pagination ul li{
+        @include border-radius(0!important);
+    }
+    .frm_forms form textarea, .frm_style_formidable-style.with_frm_style textarea, .frm_forms form select, .frm_forms .frm_form_field select, .frm_forms form input[type=text], .frm_forms form input[type=email], .frm_forms form input[type=url], .frm_forms form input[type=password], .frm_forms form input[type=number], .frm_forms form input[type=tel], .frm_style_formidable-style.with_frm_style input[type=text], .frm_style_formidable-style.with_frm_style input[type=password], .frm_style_formidable-style.with_frm_style input[type=email], .frm_style_formidable-style.with_frm_style input[type=number], .frm_style_formidable-style.with_frm_style input[type=url], .frm_style_formidable-style.with_frm_style input[type=tel], .frm_style_formidable-style.with_frm_style input[type=file], .frm_style_formidable-style.with_frm_style input[type=search], .woocommerce form input[type=text], .woocommerce form input[type=password], .woocommerce form input[type=email], .woocommerce form input[type=number], .woocommerce form input[type=url], .woocommerce form input[type=tel], .woocommerce form input[type=file], .woocommerce form input[type=search], .select2-container--default .select2-selection--single, .woocommerce form textarea, .woocommerce .woocommerce-info, .woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register, form input[type=submit],.with_frm_style .frm_submit input[type=submit],.with_frm_style .frm_submit input[type=button],.frm_form_submit_style, .with_frm_style.frm_login_form input[type=submit], .widget input[type=submit],.widget .frm_style_formidable-style.with_frm_style input[type=submit], .th-port-btn, body #booked-profile-page input[type=submit], body #booked-profile-page button, body table.booked-calendar input[type=submit], body table.booked-calendar button, body .booked-modal input[type=submit], body .booked-modal button,.th-widget-area form input[type=submit],.th-widget-area .with_frm_style .frm_submit input[type=submit],.th-widget-area .widget .frm_style_formidable-style.with_frm_style input[type=submit]{
+        @include border-radius(0!important);
+    }
+
+
+}
