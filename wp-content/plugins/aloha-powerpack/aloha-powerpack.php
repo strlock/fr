@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: Aloha PowerPack
- * Version: 1.2.12
+ * Version: 1.2.13
  * Plugin URI: https://help.bellevuetheme.com/
  * Description: Elementor PowerPack for Hotels and Vacation Rentals
  * Author: PixelMakers
@@ -567,3 +567,35 @@ if (!function_exists('showLibrary')) {
         return is_user_logged_in() && (ENABLE_BLOCK_LIBRARY === true) && (is_themovation_template() && aloha_is_theme_registered());
     }
 }
+
+add_action( 'admin_init', function(){
+    //original event was added on the admin_init event
+    //we can't remove it directly because there's no way to access the original instance
+    
+    $plugin_file = 'motopress-hotel-booking/motopress-hotel-booking.php';
+    $hook = "after_plugin_row_{$plugin_file}";
+
+    global $wp_filter;
+
+    if ( empty( $wp_filter[ $hook ] ) ) {
+        return;
+    }
+
+    // Loop through all callbacks on that hook
+    foreach ( $wp_filter[ $hook ]->callbacks as $priority => $callbacks ) {
+
+        foreach ( $callbacks as $id => $callback ) {
+
+            // Check if it's an array callback with an object of the target class
+            if (
+                isset( $callback['function'] )
+                && is_array( $callback['function'] )
+                && is_object( $callback['function'][0] )
+                && $callback['function'][0] instanceof \MPHB\LicenseNotice
+                && $callback['function'][1] === 'showPluginNotice'
+            ) {
+                unset( $wp_filter[ $hook ]->callbacks[ $priority ][ $id ] );
+            }
+        }
+    }
+}, 10 );

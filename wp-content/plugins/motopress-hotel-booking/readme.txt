@@ -18,12 +18,25 @@ Manage your hotel booking services. Perfect for hotels, villas, guest houses, ho
 1. Upload the MotoPress plugin to the /wp-content/plugins/ directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
+== Frequently Asked Questions ==
+
+= How can I override the MotoPress Hotel Booking plugin's template files in my WordPress theme? =
+
+You can copy template files from /wp-content/motopress-hotel-booking/templates/ folder to /wp-content/your-theme/hotel-booking/ to override them.
+
 == Copyright ==
 
 Hotel Booking plugin, Copyright (C) 2016, MotoPress https://motopress.com/
 Hotel Booking plugin is distributed under the terms of the GNU GPL.
 
 == Changelog ==
+
+= 5.2.4, Nov 12 2025 =
+* Security: enhanced permission checks when managing auxiliary plugins.
+
+= 5.2.3, May 27 2025 =
+* Fixed an issue with user roles that could affect new plugin installations.
+* Added support for PayPal in the Hotel Booking Accommodation-Based Payments add-on.
 
 = 5.2.2, Apr 29 2025 =
 * Fixed a time zone issue affecting night count in search results.

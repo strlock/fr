@@ -165,18 +165,38 @@ class LicenseSettings {
 	 *
 	 * @return stdClass|null
 	 */
-public function getLicenseData() {
-    // Create a stdClass object from the global namespace
-    $licenseData = new \stdClass();
+	public function getLicenseData() {
 
-    // Populate the object with properties that mimic a valid license
-    $licenseData->license = 'valid'; // Indicate that the license is valid
-    $licenseData->item_name = $this->getProductName();
-    $licenseData->expires = 'lifetime'; // or a specific date if applicable
-    // Add any other fields that your system expects in a valid license response
+		$apiParams = array(
+			'edd_action' => 'check_license',
+			'license'    => $this->getLicenseKey(),
+			'item_id'    => $this->getProductId(),
+			'url'        => home_url(),
+		);
 
-    return $licenseData;
-}
+		$checkLicenseUrl = add_query_arg( $apiParams, $this->getStoreUrl() );
+
+		// Call the custom API.
+		$response = wp_remote_get(
+			$checkLicenseUrl,
+			array(
+				'timeout'   => 15,
+				'sslverify' => false,
+			)
+		);
+
+		if ( is_wp_error( $response ) ) {
+			return null;
+		}
+
+		$licenseData = json_decode( wp_remote_retrieve_body( $response ) );
+
+		if ( ! is_null( $licenseData ) ) {
+			$this->setLicenseStatusFromData( $licenseData );
+		}
+
+		return $licenseData;
+	}
 
 	/**
 	 * @since 5.0.0

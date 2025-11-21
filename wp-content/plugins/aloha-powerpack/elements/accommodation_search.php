@@ -10,11 +10,11 @@ class Themo_Widget_Accommodation_Search extends Themo_Widget_Accommodation_Listi
     var $searchParams = [];
     var $is_preview = false;
     var $defaultCurrency = '$';
-
+    private static $controls_hooked = false;
     public function __construct($data = [], $args = null) {
         parent::__construct($data, $args);
         $this->is_preview = isset($_REQUEST['action']) && in_array($_REQUEST['action'], ['elementor', 'elementor_ajax']) ? 1 : 0;
-
+        $this->is_preview = true;
         add_filter('mphb_search_available_rooms', function ($arr) {
             $this->searchParams = $arr;
             $checkInDate = $checkOutDate = '';
@@ -74,357 +74,348 @@ class Themo_Widget_Accommodation_Search extends Themo_Widget_Accommodation_Listi
         return 'th-editor-icon-search-results';
     }
 
-    public function get_style_depends() {
-
-        $parent_name = parent::get_name();
-        $modified = filemtime(THEMO_PATH . 'css/accommodation.css');
-        wp_register_style($parent_name, THEMO_URL . 'css/accommodation.css', array(), $modified);
-        //force shim to load so it loads font awesome icons
-        Icons_Manager::enqueue_shim();
-        return [$parent_name];
-    }
-
-    public function get_script_depends() {
-        return [];
-    }
-   
     private function addElements() {
-        add_action('elementor/element/' . $this->get_name() . '/thmv_section_data/after_section_start', function ($element, $args) {
+        //make sure these are registered once
+        if ( ! self::$controls_hooked ) {
+            self::$controls_hooked = true; 
+            add_action('elementor/element/' . $this->get_name() . '/thmv_section_data/after_section_start', function ($element, $args) {
 
-            $element->add_control('orderby', array(
-                'type' => Controls_Manager::SELECT,
-                'label' => __('Order By', ALOHA_DOMAIN),
-                'default' => 'menu_order',
-                'options' => array(
-                    'none' => __('No order', ALOHA_DOMAIN),
-                    'title' => __('Post title', ALOHA_DOMAIN),
-                    'name' => __('Post name (post slug)', ALOHA_DOMAIN),
-                    'date' => __('Post date', ALOHA_DOMAIN),
-                    'rand' => __('Random order', ALOHA_DOMAIN),
-                    'menu_order' => __('Page order', ALOHA_DOMAIN),
-                    'price' => __('Price', ALOHA_DOMAIN)
-                )
-            ));
+                $element->add_control('orderby', array(
+                    'type' => Controls_Manager::SELECT,
+                    'label' => __('Order By', ALOHA_DOMAIN),
+                    'default' => 'menu_order',
+                    'options' => array(
+                        'none' => __('No order', ALOHA_DOMAIN),
+                        'title' => __('Post title', ALOHA_DOMAIN),
+                        'name' => __('Post name (post slug)', ALOHA_DOMAIN),
+                        'date' => __('Post date', ALOHA_DOMAIN),
+                        'rand' => __('Random order', ALOHA_DOMAIN),
+                        'menu_order' => __('Page order', ALOHA_DOMAIN),
+                        'price' => __('Price', ALOHA_DOMAIN)
+                    )
+                ));
 
-            $element->add_control('order', array(
-                'type' => Controls_Manager::SELECT,
-                'label' => __('Order', ALOHA_DOMAIN),
-                'default' => 'ASC',
-                'options' => array(
-                    'ASC' => __('Ascending (1,2,3)', ALOHA_DOMAIN),
-                    'DESC' => __('Descending (3,2,1)', ALOHA_DOMAIN)
-                )
-            ));
-        }, 9, 2);
+                $element->add_control('order', array(
+                    'type' => Controls_Manager::SELECT,
+                    'label' => __('Order', ALOHA_DOMAIN),
+                    'default' => 'ASC',
+                    'options' => array(
+                        'ASC' => __('Ascending (1,2,3)', ALOHA_DOMAIN),
+                        'DESC' => __('Descending (3,2,1)', ALOHA_DOMAIN)
+                    )
+                ));
+            }, 9, 2);
+
+            add_action('elementor/element/' . $this->get_name() . '/thmv_section_data/before_section_end', function ($element, $args) {
+
+                $element->add_responsive_control(
+                        'thmv_hide_results_message',
+                        [
+                            'label' => __('Top Message', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::SWITCHER,
+                            'label_on' => __('Yes', ALOHA_DOMAIN),
+                            'label_off' => __('No', ALOHA_DOMAIN),
+                            'default' => ''
+                        ]
+                );
+                $element->add_control(
+                        'thmv_hide_booking_button',
+                        [
+                            'label' => __('Booking Button', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::SWITCHER,
+                            'label_on' => __('Yes', ALOHA_DOMAIN),
+                            'label_off' => __('No', ALOHA_DOMAIN),
+                            'default' => 'yes',
+                        ]
+                );
+                $element->add_control(
+                        'thmv_hide_booking_price',
+                        [
+                            'label' => __('Booking Price', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::SWITCHER,
+                            'label_on' => __('Yes', ALOHA_DOMAIN),
+                            'label_off' => __('No', ALOHA_DOMAIN),
+                            'default' => '',
+                        ]
+                );
+            }, 9, 2);
+            add_action('elementor/element/' . $this->get_name() . '/thmv_style_section_link/after_section_end', function ($element, $args) {
+                $element->start_controls_section(
+                        'thmv_style_section_book_price',
+                        [
+                            'label' => __('Booking Price', ALOHA_DOMAIN),
+                            'tab' => Controls_Manager::TAB_STYLE,
+                            'condition' => [
+                                'thmv_hide_booking_price' => '',
+                            ],
+                        ]
+                );
+                $element->add_group_control(
+                        Group_Control_Typography::get_type(),
+                        [
+                            'label' => __('Typography', 'elementor'),
+                            'name' => 'booking_price_typography',
+                            'selector' => '{{WRAPPER}} .mphb-regular-price',
+                        ]
+                );
+                $element->add_control(
+                        'booking_price_color',
+                        [
+                            'label' => __('Color', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .mphb-regular-price' => 'color: {{VALUE}};',
+                            ],
+                        ]
+                );
+                $element->add_control(
+                        'booking_price_price_heading',
+                        [
+                            'label' => __('Price', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::HEADING,
+                            'separator' => 'before',
+                        ]
+                );
+                $element->add_group_control(
+                        Group_Control_Typography::get_type(),
+                        [
+                            'label' => __('Typography', 'elementor'),
+                            'name' => 'booking_price_price_typography',
+                            'selector' => '{{WRAPPER}} .mphb-price',
+                        ]
+                );
+                $element->add_control(
+                        'booking_price_price_color',
+                        [
+                            'label' => __('Color', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .mphb-price' => 'color: {{VALUE}};',
+                            ],
+                        ]
+                );
+
+                $element->end_controls_section();
+
+                $element->start_controls_section(
+                        'thmv_style_section_availability_text',
+                        [
+                            'label' => __('Availability Text', ALOHA_DOMAIN),
+                            'tab' => Controls_Manager::TAB_STYLE,
+                            'condition' => [
+                                'thmv_hide_booking_price' => '',
+                            ],
+                        ]
+                );
+                $element->add_group_control(
+                        Group_Control_Typography::get_type(),
+                        [
+                            'label' => __('Typography', 'elementor'),
+                            'name' => 'availability_typography',
+                            'selector' => '{{WRAPPER}} .mphb-available-rooms-count',
+                        ]
+                );
+                $element->add_control(
+                        'availability_color',
+                        [
+                            'label' => __('Color', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .mphb-available-rooms-count' => 'color: {{VALUE}};',
+                            ],
+                        ]
+                );
+                $element->add_control(
+                        'availability_count_dropdown_header',
+                        [
+                            'label' => __('Dropdown', 'the-widget-pack'),
+                            'type' => Controls_Manager::HEADING,
+                            'separator' => 'before',
+                        ]
+                );
+                $element->add_group_control(
+                        Group_Control_Typography::get_type(),
+                        [
+                            'label' => __('Typography', 'elementor'),
+                            'name' => 'availability_count_dropdown_typography',
+                            'selector' => '{{WRAPPER}} .mphb-rooms-quantity',
+                        ]
+                );
+                $element->add_control(
+                        'availability_count_dropdown_color',
+                        [
+                            'label' => __('Color', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .mphb-rooms-quantity' => 'color: {{VALUE}};',
+                            ],
+                        ]
+                );
+                $element->add_control(
+                        'availability_count_dropdown_border_color',
+                        [
+                            'label' => __('Border Color', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .mphb-rooms-quantity' => 'border-color: {{VALUE}};',
+                            ],
+                        ]
+                );
+
+                $element->end_controls_section();
+
+                $element->start_controls_section(
+                        'thmv_style_section_book_button',
+                        [
+                            'label' => __('Book Button', ALOHA_DOMAIN),
+                            'tab' => Controls_Manager::TAB_STYLE,
+                            'condition' => [
+                                'thmv_hide_booking_button' => '',
+                            ],
+                        ]
+                );
+                $element->add_group_control(
+                        Group_Control_Typography::get_type(),
+                        [
+                            'label' => __('Typography', 'elementor'),
+                            'name' => 'book_button_typography',
+                            'selector' => '{{WRAPPER}} .thmv-book-button',
+                        ]
+                );
+                $element->add_control(
+                        'book_button_color',
+                        [
+                            'label' => __('Color', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .thmv-book-button' => 'color: {{VALUE}};',
+                            ],
+                        ]
+                );
+                $element->add_control(
+                        'book_button_background_color',
+                        [
+                            'label' => __('Background', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .thmv-book-button' => 'background-color: {{VALUE}};border-color: {{VALUE}};',
+                            ],
+                        ]
+                );
+
+                $element->add_control(
+                        'book_button_color_hover',
+                        [
+                            'label' => __('Color - Hover', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .thmv-book-button:hover' => 'color: {{VALUE}};',
+                            ],
+                            'separator' => 'before',
+                        ]
+                );
+                $element->add_control(
+                        'book_button_background_color_hover',
+                        [
+                            'label' => __('Background - Hover', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .thmv-book-button:hover' => 'background-color: {{VALUE}};border-color: {{VALUE}};',
+                            ],
+                        ]
+                );
+                $element->add_control(
+                        'book_button_style',
+                        [
+                            'label' => __('Button Style', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::SELECT,
+                            'default' => '',
+                            'options' => [
+                                '' => __('Default', ALOHA_DOMAIN),
+                                'standard-primary' => __('Standard Primary', ALOHA_DOMAIN),
+                                'standard-accent' => __('Standard Accent', ALOHA_DOMAIN),
+                                'standard-light' => __('Standard Light', ALOHA_DOMAIN),
+                                'standard-dark' => __('Standard Dark', ALOHA_DOMAIN),
+                                'ghost-primary' => __('Ghost Primary', ALOHA_DOMAIN),
+                                'ghost-accent' => __('Ghost Accent', ALOHA_DOMAIN),
+                                'ghost-light' => __('Ghost Light', ALOHA_DOMAIN),
+                                'ghost-dark' => __('Ghost Dark', ALOHA_DOMAIN),
+                                'cta-primary' => __('CTA Primary', ALOHA_DOMAIN),
+                                'cta-accent' => __('CTA Accent', ALOHA_DOMAIN),
+                            ],
+                            'separator' => 'before',
+                        ]
+                );
+
+                $element->add_responsive_control(
+                        'book_link_padding',
+                        [
+                            'label' => __('Padding', 'elementor'),
+                            'type' => Controls_Manager::DIMENSIONS,
+                            'size_units' => ['px', 'em', '%'],
+                            'selectors' => [
+                                '{{WRAPPER}} .thmv-book-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                        ]
+                );
+                $element->add_responsive_control(
+                        'book_button_stretch',
+                        [
+                            'label' => __('Stretch Button', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::SWITCHER,
+                            'label_on' => __('Yes', ALOHA_DOMAIN),
+                            'label_off' => __('No', ALOHA_DOMAIN),
+                            'return_value' => 'yes',
+                        ]
+                );
+                $element->end_controls_section();
+                $element->start_controls_section(
+                        'thmv_style_section_reservation_button',
+                        [
+                            'label' => __('Confirm Reservation Button', ALOHA_DOMAIN),
+                            'tab' => Controls_Manager::TAB_STYLE,
+                            'condition' => [
+                                'thmv_hide_booking_button' => '',
+                            ],
+                        ]
+                );
+                $element->add_control(
+                        'reservation_button_style',
+                        [
+                            'label' => __('Button Style', ALOHA_DOMAIN),
+                            'type' => Controls_Manager::SELECT,
+                            'default' => '',
+                            'options' => [
+                                '' => __('Default', ALOHA_DOMAIN),
+                                'standard-primary' => __('Standard Primary', ALOHA_DOMAIN),
+                                'standard-accent' => __('Standard Accent', ALOHA_DOMAIN),
+                                'standard-light' => __('Standard Light', ALOHA_DOMAIN),
+                                'standard-dark' => __('Standard Dark', ALOHA_DOMAIN),
+                                'ghost-primary' => __('Ghost Primary', ALOHA_DOMAIN),
+                                'ghost-accent' => __('Ghost Accent', ALOHA_DOMAIN),
+                                'ghost-light' => __('Ghost Light', ALOHA_DOMAIN),
+                                'ghost-dark' => __('Ghost Dark', ALOHA_DOMAIN),
+                                'cta-primary' => __('CTA Primary', ALOHA_DOMAIN),
+                                'cta-accent' => __('CTA Accent', ALOHA_DOMAIN),
+                            ],
+                            'separator' => 'before',
+                        ]
+                );
+                $element->add_responsive_control(
+                        'reservation_button_padding',
+                        [
+                            'label' => __('Padding', 'elementor'),
+                            'type' => Controls_Manager::DIMENSIONS,
+                            'size_units' => ['px', 'em', '%'],
+                            'selectors' => [
+                                '{{WRAPPER}} .mphb-confirm-reservation' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                        ]
+                );
+                $element->end_controls_section();
+            }, 10, 2);
         
-        add_action('elementor/element/' . $this->get_name() . '/thmv_section_data/before_section_end', function ($element, $args) {
-
-            $element->add_responsive_control(
-                    'thmv_hide_results_message',
-                    [
-                        'label' => __('Top Message', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::SWITCHER,
-                        'label_on' => __('Yes', ALOHA_DOMAIN),
-                        'label_off' => __('No', ALOHA_DOMAIN),
-                        'default' => ''
-                    ]
-            );
-            $element->add_control(
-                    'thmv_hide_booking_button',
-                    [
-                        'label' => __('Booking Button', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::SWITCHER,
-                        'label_on' => __('Yes', ALOHA_DOMAIN),
-                        'label_off' => __('No', ALOHA_DOMAIN),
-                        'default' => 'yes',
-                    ]
-            );
-            $element->add_control(
-                    'thmv_hide_booking_price',
-                    [
-                        'label' => __('Booking Price', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::SWITCHER,
-                        'label_on' => __('Yes', ALOHA_DOMAIN),
-                        'label_off' => __('No', ALOHA_DOMAIN),
-                        'default' => '',
-                    ]
-            );
-        }, 9, 2);
-        add_action('elementor/element/' . $this->get_name() . '/thmv_style_section_link/after_section_end', function ($element, $args) {
-            $element->start_controls_section(
-                    'thmv_style_section_book_price',
-                    [
-                        'label' => __('Booking Price', ALOHA_DOMAIN),
-                        'tab' => Controls_Manager::TAB_STYLE,
-                        'condition' => [
-                            'thmv_hide_booking_price' => '',
-                        ],
-                    ]
-            );
-            $element->add_group_control(
-                    Group_Control_Typography::get_type(),
-                    [
-                        'label' => __('Typography', 'elementor'),
-                        'name' => 'booking_price_typography',
-                        'selector' => '{{WRAPPER}} .mphb-regular-price',
-                    ]
-            );
-            $element->add_control(
-                    'booking_price_color',
-                    [
-                        'label' => __('Color', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::COLOR,
-                        'selectors' => [
-                            '{{WRAPPER}} .mphb-regular-price' => 'color: {{VALUE}};',
-                        ],
-                    ]
-            );
-            $element->add_control(
-                    'booking_price_price_heading',
-                    [
-                        'label' => __('Price', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::HEADING,
-                        'separator' => 'before',
-                    ]
-            );
-            $element->add_group_control(
-                    Group_Control_Typography::get_type(),
-                    [
-                        'label' => __('Typography', 'elementor'),
-                        'name' => 'booking_price_price_typography',
-                        'selector' => '{{WRAPPER}} .mphb-price',
-                    ]
-            );
-            $element->add_control(
-                    'booking_price_price_color',
-                    [
-                        'label' => __('Color', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::COLOR,
-                        'selectors' => [
-                            '{{WRAPPER}} .mphb-price' => 'color: {{VALUE}};',
-                        ],
-                    ]
-            );
-
-            $element->end_controls_section();
-
-            $element->start_controls_section(
-                    'thmv_style_section_availability_text',
-                    [
-                        'label' => __('Availability Text', ALOHA_DOMAIN),
-                        'tab' => Controls_Manager::TAB_STYLE,
-                        'condition' => [
-                            'thmv_hide_booking_price' => '',
-                        ],
-                    ]
-            );
-            $element->add_group_control(
-                    Group_Control_Typography::get_type(),
-                    [
-                        'label' => __('Typography', 'elementor'),
-                        'name' => 'availability_typography',
-                        'selector' => '{{WRAPPER}} .mphb-available-rooms-count',
-                    ]
-            );
-            $element->add_control(
-                    'availability_color',
-                    [
-                        'label' => __('Color', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::COLOR,
-                        'selectors' => [
-                            '{{WRAPPER}} .mphb-available-rooms-count' => 'color: {{VALUE}};',
-                        ],
-                    ]
-            );
-            $element->add_control(
-                    'availability_count_dropdown_header',
-                    [
-                        'label' => __('Dropdown', 'the-widget-pack'),
-                        'type' => Controls_Manager::HEADING,
-                        'separator' => 'before',
-                    ]
-            );
-            $element->add_group_control(
-                    Group_Control_Typography::get_type(),
-                    [
-                        'label' => __('Typography', 'elementor'),
-                        'name' => 'availability_count_dropdown_typography',
-                        'selector' => '{{WRAPPER}} .mphb-rooms-quantity',
-                    ]
-            );
-            $element->add_control(
-                    'availability_count_dropdown_color',
-                    [
-                        'label' => __('Color', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::COLOR,
-                        'selectors' => [
-                            '{{WRAPPER}} .mphb-rooms-quantity' => 'color: {{VALUE}};',
-                        ],
-                    ]
-            );
-            $element->add_control(
-                    'availability_count_dropdown_border_color',
-                    [
-                        'label' => __('Border Color', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::COLOR,
-                        'selectors' => [
-                            '{{WRAPPER}} .mphb-rooms-quantity' => 'border-color: {{VALUE}};',
-                        ],
-                    ]
-            );
-
-            $element->end_controls_section();
-
-            $element->start_controls_section(
-                    'thmv_style_section_book_button',
-                    [
-                        'label' => __('Book Button', ALOHA_DOMAIN),
-                        'tab' => Controls_Manager::TAB_STYLE,
-                        'condition' => [
-                            'thmv_hide_booking_button' => '',
-                        ],
-                    ]
-            );
-            $element->add_group_control(
-                    Group_Control_Typography::get_type(),
-                    [
-                        'label' => __('Typography', 'elementor'),
-                        'name' => 'book_button_typography',
-                        'selector' => '{{WRAPPER}} .thmv-book-button',
-                    ]
-            );
-            $element->add_control(
-                    'book_button_color',
-                    [
-                        'label' => __('Color', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::COLOR,
-                        'selectors' => [
-                            '{{WRAPPER}} .thmv-book-button' => 'color: {{VALUE}};',
-                        ],
-                    ]
-            );
-            $element->add_control(
-                    'book_button_background_color',
-                    [
-                        'label' => __('Background', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::COLOR,
-                        'selectors' => [
-                            '{{WRAPPER}} .thmv-book-button' => 'background-color: {{VALUE}};border-color: {{VALUE}};',
-                        ],
-                    ]
-            );
-
-            $element->add_control(
-                    'book_button_color_hover',
-                    [
-                        'label' => __('Color - Hover', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::COLOR,
-                        'selectors' => [
-                            '{{WRAPPER}} .thmv-book-button:hover' => 'color: {{VALUE}};',
-                        ],
-                        'separator' => 'before',
-                    ]
-            );
-            $element->add_control(
-                    'book_button_background_color_hover',
-                    [
-                        'label' => __('Background - Hover', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::COLOR,
-                        'selectors' => [
-                            '{{WRAPPER}} .thmv-book-button:hover' => 'background-color: {{VALUE}};border-color: {{VALUE}};',
-                        ],
-                    ]
-            );
-            $element->add_control(
-                    'book_button_style',
-                    [
-                        'label' => __('Button Style', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::SELECT,
-                        'default' => '',
-                        'options' => [
-                            '' => __('Default', ALOHA_DOMAIN),
-                            'standard-primary' => __('Standard Primary', ALOHA_DOMAIN),
-                            'standard-accent' => __('Standard Accent', ALOHA_DOMAIN),
-                            'standard-light' => __('Standard Light', ALOHA_DOMAIN),
-                            'standard-dark' => __('Standard Dark', ALOHA_DOMAIN),
-                            'ghost-primary' => __('Ghost Primary', ALOHA_DOMAIN),
-                            'ghost-accent' => __('Ghost Accent', ALOHA_DOMAIN),
-                            'ghost-light' => __('Ghost Light', ALOHA_DOMAIN),
-                            'ghost-dark' => __('Ghost Dark', ALOHA_DOMAIN),
-                            'cta-primary' => __('CTA Primary', ALOHA_DOMAIN),
-                            'cta-accent' => __('CTA Accent', ALOHA_DOMAIN),
-                        ],
-                        'separator' => 'before',
-                    ]
-            );
-
-            $element->add_responsive_control(
-                    'book_link_padding',
-                    [
-                        'label' => __('Padding', 'elementor'),
-                        'type' => Controls_Manager::DIMENSIONS,
-                        'size_units' => ['px', 'em', '%'],
-                        'selectors' => [
-                            '{{WRAPPER}} .thmv-book-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                        ],
-                    ]
-            );
-            $element->add_responsive_control(
-                    'book_button_stretch',
-                    [
-                        'label' => __('Stretch Button', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::SWITCHER,
-                        'label_on' => __('Yes', ALOHA_DOMAIN),
-                        'label_off' => __('No', ALOHA_DOMAIN),
-                        'return_value' => 'yes',
-                    ]
-            );
-            $element->end_controls_section();
-            $element->start_controls_section(
-                    'thmv_style_section_reservation_button',
-                    [
-                        'label' => __('Confirm Reservation Button', ALOHA_DOMAIN),
-                        'tab' => Controls_Manager::TAB_STYLE,
-                        'condition' => [
-                            'thmv_hide_booking_button' => '',
-                        ],
-                    ]
-            );
-            $element->add_control(
-                    'reservation_button_style',
-                    [
-                        'label' => __('Button Style', ALOHA_DOMAIN),
-                        'type' => Controls_Manager::SELECT,
-                        'default' => '',
-                        'options' => [
-                            '' => __('Default', ALOHA_DOMAIN),
-                            'standard-primary' => __('Standard Primary', ALOHA_DOMAIN),
-                            'standard-accent' => __('Standard Accent', ALOHA_DOMAIN),
-                            'standard-light' => __('Standard Light', ALOHA_DOMAIN),
-                            'standard-dark' => __('Standard Dark', ALOHA_DOMAIN),
-                            'ghost-primary' => __('Ghost Primary', ALOHA_DOMAIN),
-                            'ghost-accent' => __('Ghost Accent', ALOHA_DOMAIN),
-                            'ghost-light' => __('Ghost Light', ALOHA_DOMAIN),
-                            'ghost-dark' => __('Ghost Dark', ALOHA_DOMAIN),
-                            'cta-primary' => __('CTA Primary', ALOHA_DOMAIN),
-                            'cta-accent' => __('CTA Accent', ALOHA_DOMAIN),
-                        ],
-                        'separator' => 'before',
-                    ]
-            );
-            $element->add_responsive_control(
-                    'reservation_button_padding',
-                    [
-                        'label' => __('Padding', 'elementor'),
-                        'type' => Controls_Manager::DIMENSIONS,
-                        'size_units' => ['px', 'em', '%'],
-                        'selectors' => [
-                            '{{WRAPPER}} .mphb-confirm-reservation' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                        ],
-                    ]
-            );
-            $element->end_controls_section();
-        }, 10, 2);
+        }
     }
 
     public function _register_controls() {

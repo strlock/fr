@@ -13,47 +13,17 @@ class Themo_Widget_Accommodation_Listing extends Widget_Base {
     var $currentItem = [];
     public function __construct($data = [], $args = null) {
         parent::__construct($data, $args);
-        
-        add_action('elementor/element/' . $this->get_name() . '/thmv_section_data/before_section_end', function ($element, $args) {
-            
-            $element->add_control(
-                    'thmv_slider_heading',
-                    [
-                        'label' => __('Slider', 'elementor'),
-                        'type' => Controls_Manager::HEADING,
-                        'separator' => 'before',
-                        'condition' => [
-                            'thmv_data_switcher' => 'yes',
-                        ],
-                    ]
-            );
-            $element->add_control(
-                'thmv_slider_active',
-                [
-                    'label' => __('Active', ALOHA_DOMAIN),
-                    'type' => Controls_Manager::SWITCHER,
-                    'label_on' => __('Yes', ALOHA_DOMAIN),
-                    'label_off' => __('No', ALOHA_DOMAIN),
-                    'default' => '',
-                    'description' => __('Make sure to set the columns at the top, default option might not work as expected.', ALOHA_DOMAIN),
-                    'condition' => [
-                        'thmv_data_switcher' => 'yes',
-                    ],
-                ]
-            );
-        
-        }, 10, 2);
     }
     public function get_style_depends() {
         $modified = filemtime(THEMO_PATH . 'css/accommodation.css');
-        wp_register_style($this->get_name(), THEMO_URL . 'css/accommodation.css', array(), $modified);
+        wp_register_style('themo-accommodation-listing', THEMO_URL . 'css/accommodation.css', array(), $modified);
         //force shim to load so it loads font awesome icons
         Icons_Manager::enqueue_shim();
-        return [$this->get_name()];
+        return ['themo-accommodation-listing', 'elementor-icons', 'e-swiper' ];
     }
 
     public function get_script_depends() {
-        return [];
+        return [ 'swiper' ];
     }
 
     public function get_name() {
@@ -485,6 +455,33 @@ class Themo_Widget_Accommodation_Listing extends Widget_Base {
             ]
         );
 
+        $this->add_control(
+                    'thmv_slider_heading',
+                    [
+                        'label' => __('Slider', 'elementor'),
+                        'type' => Controls_Manager::HEADING,
+                        'separator' => 'before',
+                        'condition' => [
+                            'thmv_data_switcher' => 'yes',
+                        ],
+                    ]
+            );
+        
+        $this->add_control(
+            'thmv_slider_active',
+            [
+                'label' => __('Active', ALOHA_DOMAIN),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => __('Yes', ALOHA_DOMAIN),
+                'label_off' => __('No', ALOHA_DOMAIN),
+                'default' => '',
+                'description' => __('Make sure to set the columns at the top, default option might not work as expected.', ALOHA_DOMAIN),
+                'condition' => [
+                    'thmv_data_switcher' => 'yes',
+                ],
+            ]
+        );
+        
         $this->end_controls_section();
 
         /** listing repeater * */
@@ -2084,7 +2081,7 @@ class Themo_Widget_Accommodation_Listing extends Widget_Base {
         . 'data-element_type="widget" '
         . 'class="elementor-element  elementor-arrows-position-inside elementor-widget elementor-widget-image-carousel">'
         . '<div '
-        . 'class="elementor-image-carousel-wrapper swiper-container" '
+        . 'class="elementor-image-carousel-wrapper swiper" '
         . 'dir="ltr">';
         ?>
         <div class="accommodation-top-navigation d-flex justify-content-end align-items-center" style="padding: 0 10px;">
@@ -2168,7 +2165,7 @@ class Themo_Widget_Accommodation_Listing extends Widget_Base {
                     'class' => 'elementor-image-carousel swiper-wrapper',
                 ],
                 'carousel-wrapper' => [
-                    'class' => 'elementor-image-carousel-wrapper swiper-container',
+                    'class' => 'elementor-image-carousel-wrapper swiper',
                     'dir' => 'ltr',
                 ],
             ]);

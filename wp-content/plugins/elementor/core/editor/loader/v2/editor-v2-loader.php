@@ -20,6 +20,7 @@ class Editor_V2_Loader extends Editor_Base_Loader {
 	 * Packages that should only be registered, unless some other asset depends on them.
 	 */
 	const LIBS = [
+		'mixpanel',
 		'editor-responsive',
 		'editor-ui',
 		'editor-v1-adapters',
@@ -36,12 +37,15 @@ class Editor_V2_Loader extends Editor_Base_Loader {
 		'ui',
 		'utils',
 		'wp-media',
+		'editor-current-user',
 	];
 
 	const EXTENSIONS = [
 		'editor-documents',
 		'editor-notifications',
 		'editor-panels',
+		'editor-elements-panel',
+		'editor-mcp',
 	];
 
 	/**

@@ -1,11 +1,11 @@
 === Elementor Website Builder - More Than Just a Page Builder ===
 Contributors: elemntor
 Tags: page builder, editor, landing page, drag-and-drop, elementor,
-Requires at least: 6.5
-Tested up to: 6.7
+Requires at least: 6.6
+Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 3.29.0
-Beta tag: 3.29.0-beta4
+Stable tag: 3.33.1
+Beta tag: 3.33.0-beta4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -349,38 +349,22 @@ You can also add a new language via [translate.wordpress.org](https://go.element
 
 == Changelog ==
 
-= 3.29.0 - 2025-05-19 =
+= 3.33.1 - 2025-11-17 =
 
-* New: Introduced the first Alpha release of the next-generation Editor - a faster, modular, CSS-based infrastructure available as an opt-in experience - Editor V4
-* New: Combine familiar and new Editor elements for a seamless editing experience - Editor V4
-* New: Introduced cleaner code and fewer div wrappers for faster performance and a lighter editing experience - Editor V4
-* New: Gain full responsive control - adjust every style property individually for each device, without limitations - Editor V4
-* New: Introduced Classes - a reusable styling system that brings consistency, modularity, and CSS-based workflows to your designs - Editor V4
-* New: Introduced Class Manager - centrally manage, rename, reorder, and delete Classes across your site - Editor V4
-* New: Introduced States - define hover, focus, and active styles for Classes to create dynamic, interactive designs - Editor V4
-* New: Introduced Local Class - a fixed, non-removable class with highest styling priority, ensuring unique styling for each element - Editor V4
-* New: Introduced Class Indicators - color-coded visual cues that show where styles originate, inherit, or conflict - Editor V4
-* New: Introduced a unified Style Tab - a consistent, CSS-based styling system shared across all elements, streamlining design workflows - Editor V4
-* New: Introduced Style Repeaters - create and manage multiple background and box shadow layers with full control over their order and visibility - Editor V4
-* New: Introduced Actions Floating Bar - a cleaner, context-aware toolbar that appears on hover, starting with Dynamic Tags support - Editor V4
-* New: Introduced Link Control - add and customize links across elements with clean HTML, while preventing nested links - Editor V4
-* New: Introduced Logical Properties - styling adapts automatically to different writing directions for global language support - Editor V4
-* New: Added DIV Block element - a container element for structuring layouts with customizable display options - Editor V4
-* New: Added Flexbox element - a layout element for precise alignment and distribution - Editor V4
-* New: Added Heading element - a standalone heading element with flexible styling - Editor V4
-* New: Added Paragraph element - a simple, dedicated text element for paragraphs - Editor V4
-* New: Added Image element - a modular image element with clean markup and consistent styling - Editor V4
-* New: Added Button element - a customizable button element for modular design - Editor V4
-* New: Added SVG element - a lightweight element for adding scalable vector graphics - Editor V4
-* Tweak: Added `AVIF` image format support to Lightbox ([#28256](https://github.com/elementor/elementor/issues/28256), [#25175](https://github.com/elementor/elementor/issues/25175), [#28169](https://github.com/elementor/elementor/issues/28169), [#29624](https://github.com/elementor/elementor/issues/29624))
-* Tweak: Renamed "My Templates" to "Templates" in the Templates Library
-* Tweak: Marked local templates as "Site Templates" to distinguish them from Cloud Templates
-* Tweak: Excluded Shape Dividers from the accessibility tree
-* Tweak: Improved accessibility with `role` attributes in the Social Icons widget
-* Tweak: Added Display Title control to the Progress Bar widget to enhance accessibility
-* Fix: Strings are not translating properly in the Global Style Guide ([#23237](https://github.com/elementor/elementor/issues/23237))
-* Fix: Mask shape URLs use double slashes instead of single slashes ([#17534](https://github.com/elementor/elementor/issues/17534))
-* Fix: Common scripts are loaded late when using the Theme Builder
-* Fix: 'New Prompt' Button does not work in Generate Code AI feature
+* Security Fix: Improved code security enforcement in Floating Elements
+
+= 3.33.0 - 2025-11-10 =
+
+* New: Introducing Variables Manager to manage design variables like colors, fonts, and sizes from a centralized panel - Editor V4
+* New: Introducing Blend Mode control to create layered visual effects by defining how elements blend with backgrounds - Editor V4
+* New: Introducing Background Clipping control to define where an element's background is rendered across the element's layout - Editor V4
+* Tweak: Updated Editor Top Bar layout and button placement for improved navigation
+* Tweak: Adjusted default cache behavior to inactive and updated FAQ Schema notice in Accordion widget
+* Tweak: Improved error handling in Import and Export customization flow
+* Tweak: Applied CSS logical properties support in Star Rating widget
+* Tweak: Enhanced accessibility in Star Rating widget
+* Tweak: Updated minimum supported versions for Chrome, Firefox, and Safari
+* Fix: Child pages and menu items not importing correctly in Website Templates
+* Fix: Deprecated `utf8_encode()` and `utf8_decode()` functions replaced for PHP 8.2 compatibility ([#27499](https://github.com/elementor/elementor/issues/27499))
 
 [See changelog for all versions.](https://go.elementor.com/full-changelog/)
