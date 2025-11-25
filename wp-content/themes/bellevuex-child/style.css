@@ -8,8 +8,94 @@ Version:        4.0
 Text Domain:    bellevue
 Domain Path:    /languages/
 */
-
-
 /* = Theme customization starts here
 -------------------------------------------------------------- */
+h1, .h1 h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #074365;
+}
 
+.logotype a:hover {
+  text-decoration: none !important;
+}
+
+.startpage-bg-1 {
+  position: absolute;
+  left: 0;
+}
+
+.startpage-top-1 {
+  position: relative;
+}
+.startpage-top-1:before {
+  position: absolute;
+  content: url("images/bg-1.png");
+  display: block;
+  height: 182px;
+  width: 596px;
+  top: 85px;
+}
+@media (max-width: 1023px) {
+  .startpage-top-1:before {
+    display: none !important;
+  }
+}
+
+.thmv-inner-right.thmv-inner-right-1 {
+  --padding-right: 80px;
+  max-width: calc(485px + var(--padding-right));
+  padding-right: var(--padding-right);
+}
+
+.hfe-nav-menu .menu-item:first-child a.hfe-menu-item {
+  padding-left: 0 !important;
+}
+.hfe-nav-menu .menu-item a.hfe-menu-item {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.sp-search-form .frm_forms form label, .sp-search-form .with_frm_style label.frm_primary_label, .sp-search-form .with_frm_style.frm_login_form label, .sp-search-form .frm_style_formidable-style.with_frm_style label.frm_primary_label, .sp-search-form .frm_style_formidable-style.with_frm_style.frm_login_form label, .sp-search-form .frm_style_formidable-style.with_frm_style .frm_radio label, .sp-search-form .frm_style_formidable-style.with_frm_style .frm_checkbox label {
+  font-size: 12px;
+  color: #121212;
+}
+.sp-search-form .th-fo-form {
+  padding-top: 0;
+}
+.sp-search-form .th-fo-form .frm_form_field label, .sp-search-form .th-fo-form .frm_form_field br {
+  margin: 0;
+}
+.sp-search-form .th-fo-form .frm_form_field br {
+  height: 0 !important;
+}
+.sp-search-form .th-fo-form .frm_form_field select, .sp-search-form .th-fo-form .frm_form_field input {
+  margin-top: 4px !important;
+}
+.sp-search-form .th-fo-form .frm_form_field, .sp-search-form .th-fo-form .frm_submit {
+  line-height: 1;
+  margin-bottom: 0 !important;
+}
+
+.sp-special-offers h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  vertical-align: middle;
+  margin-bottom: 32px;
+}
+.sp-special-offers .elementor-widget-themo-accommodation-listing .thmv-column .thmv-info {
+  margin-top: 8px !important;
+}
+.sp-special-offers .elementor-widget-themo-accommodation-listing .thmv-column .thmv-info .thmv-title {
+  text-align: center;
+  max-width: 242px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,38 @@
+.logotype {
+    a {
+        &:hover {
+            text-decoration: none !important;
+        }
+    }
+}
+
+.startpage-bg-1 {
+    position: absolute;
+    left: 0;
+}
+
+#thhf-masthead.transparent-header {
+}
+
+.startpage-top-1 {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: url("images/bg-1.png");
+        display: block;
+        height: 182px;
+        width: 596px;
+        top: 85px;
+
+        @media (max-width: 1023px) {
+            display: none !important;
+        }
+    }
+}
+
+.thmv-inner-right.thmv-inner-right-1 {
+    --padding-right: 80px;
+    max-width: calc(485px + var(--padding-right));
+    padding-right: var(--padding-right);
+}

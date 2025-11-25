@@ -1,0 +1,14 @@
+.hfe-nav-menu {
+    .menu-item {
+        &:first-child {
+            a.hfe-menu-item {
+                padding-left: 0 !important;
+            }
+        }
+
+        a.hfe-menu-item {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+    }
+}

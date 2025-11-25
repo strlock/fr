@@ -1,0 +1,29 @@
+.sp-search-form {
+    .frm_forms form label, .with_frm_style label.frm_primary_label, .with_frm_style.frm_login_form label, .frm_style_formidable-style.with_frm_style label.frm_primary_label, .frm_style_formidable-style.with_frm_style.frm_login_form label, .frm_style_formidable-style.with_frm_style .frm_radio label, .frm_style_formidable-style.with_frm_style .frm_checkbox label {
+        font-size: 12px;
+        color: #121212;
+    }
+
+    .th-fo-form {
+        padding-top: 0;
+
+        .frm_form_field {
+            label, br {
+                margin: 0;
+            }
+
+            br {
+                height: 0 !important;
+            }
+
+            select, input {
+                margin-top: 4px !important;
+            }
+        }
+
+        .frm_form_field, .frm_submit {
+            line-height: 1;
+            margin-bottom: 0 !important;
+        }
+    }
+}

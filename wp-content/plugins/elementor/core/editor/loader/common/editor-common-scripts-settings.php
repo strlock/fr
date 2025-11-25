@@ -34,7 +34,7 @@ class Editor_Common_Scripts_Settings {
 		$page_title_selector = $kits_manager->get_current_settings( 'page_title_selector' );
 		$top_bar_connect_app = Plugin::$instance->common->get_component( 'connect' )->get_app( 'activate' ) ?? Plugin::$instance->common->get_component( 'connect' )->get_app( 'library' );
 
-		$page_title_selector .= ', .elementor-page-title .elementor-heading-title';
+		$page_title_selector .= ', .elementor-page-title .elementor-heading-title test-1';
 
 		$client_env = [
 			'initial_document' => $document->get_config(),
