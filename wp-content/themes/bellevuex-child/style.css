@@ -51,6 +51,10 @@ h1, .h1 h1 {
   padding-right: var(--padding-right);
 }
 
+.elementor-31 .elementor-element.elementor-element-47af772c .elementor-icon-box-content .elementor-icon-box-description {
+  margin-bottom: 40px;
+}
+
 .hfe-nav-menu .menu-item:first-child a.hfe-menu-item {
   padding-left: 0 !important;
 }
