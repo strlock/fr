@@ -1,0 +1,28 @@
+.elementor-widget-themo-accommodation-listing .elementor-row.thmv-style-1 .thmv-learn-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    white-space: normal;
+    font-size: 14px;
+    border-radius: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: var(--e-global-color-thmv_primary) !important;
+    border-color: var(--e-global-color-thmv_primary) !important;
+    text-transform: none !important;
+    height: 40px;
+    line-height: 40px !important;
+    width: 187px;
+    padding: 0 !important;
+
+    &:hover {
+        opacity: 0.85 !important;
+        color: #fff !important;
+    }
+}
