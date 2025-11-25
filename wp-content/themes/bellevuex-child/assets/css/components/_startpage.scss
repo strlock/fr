@@ -1,0 +1,26 @@
+.logotype {
+    a {
+        &:hover {
+            text-decoration: none !important;
+        }
+    }
+}
+
+.startpage-bg-1 {
+    position: absolute;
+    left: 0;
+}
+
+#thhf-masthead.transparent-header {
+    position: static !important;
+}
+
+.startpage-top-1 {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: url("images/bg-1.png");
+    }
+}
+

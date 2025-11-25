@@ -8,8 +8,36 @@ Version:        4.0
 Text Domain:    bellevue
 Domain Path:    /languages/
 */
-
-
 /* = Theme customization starts here
 -------------------------------------------------------------- */
+h1, .h1 h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #074365;
+}
 
+.logotype a:hover {
+  text-decoration: none !important;
+}
+
+.startpage-bg-1 {
+  position: absolute;
+  left: 0;
+}
+
+#thhf-masthead.transparent-header {
+  position: static !important;
+}
+
+.startpage-top-1 {
+  position: relative;
+}
+.startpage-top-1:before {
+  position: absolute;
+  content: url("images/bg-1.png");
+}
+
+/*# sourceMappingURL=style.css.map */
