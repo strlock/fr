@@ -1,0 +1,19 @@
+<wpml-config>
+    <admin-texts>
+        <key name="mphb_email_customer_request_payment_subject"/>
+        <key name="mphb_email_customer_request_payment_header"/>
+        <key name="mphb_email_customer_request_payment_content"/>
+        <key name="mphb_email_customer_request_deposit_payment_subject"/>
+        <key name="mphb_email_customer_request_deposit_payment_header"/>
+        <key name="mphb_email_customer_request_deposit_payment_content"/>
+        <key name="mphb_email_customer_request_custom_payment_subject"/>
+        <key name="mphb_email_customer_request_custom_payment_header"/>
+        <key name="mphb_email_customer_request_custom_payment_content"/>
+        <key name="mphb_email_customer_payment_confirmation_subject"/>
+        <key name="mphb_email_customer_payment_confirmation_header"/>
+        <key name="mphb_email_customer_payment_confirmation_content"/>
+        <key name="mphb_email_admin_request_paid_subject"/>
+        <key name="mphb_email_admin_request_paid_header"/>
+        <key name="mphb_email_admin_request_paid_content"/>
+    </admin-texts>
+</wpml-config>

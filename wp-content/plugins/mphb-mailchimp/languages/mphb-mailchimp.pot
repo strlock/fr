@@ -1,0 +1,345 @@
+# Copyright (C) 2020 MotoPress
+# This file is distributed under the same license as the Hotel Booking & Mailchimp Integration plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hotel Booking & Mailchimp Integration 1.0.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mphb-mailchimp\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-03-31T16:52:07+03:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.3.0\n"
+"X-Domain: mphb-mailchimp\n"
+
+#. Plugin Name of the plugin
+msgid "Hotel Booking & Mailchimp Integration"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://motopress.com/products/hotel-booking-mailchimp/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Instantly connect Mailchimp with your hotel website to send stylish emails with significant booking data, helpful automated messages and targeted marketing campaigns."
+msgstr ""
+
+#. Author of the plugin
+msgid "MotoPress"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://motopress.com/"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:19
+msgid "The License Key is required in order to get automatic plugin updates and support. You can manage your License Key in your personal account. <a>Learn more</a>."
+msgstr ""
+
+#: classes/admin/license-settings-group.php:28
+msgid "License Key"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:40
+msgid "Status"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:47
+msgid "Inactive"
+msgstr ""
+
+#. translators: %s - date in format d.m.Y
+#: classes/admin/license-settings-group.php:55
+msgid "Valid until %s"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:57
+msgid "Valid (Lifetime)"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:62
+msgid "Disabled"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:66
+msgid "Expired"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:70
+msgid "Invalid"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:74
+msgid "Your License Key does not match the installed plugin. <a>How to fix this.</a>"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:81
+msgid "Product ID is not valid"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:91
+msgid "Action"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:96
+msgid "Activate License"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:99
+msgid "Deactivate License"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:102
+msgid "Renew License"
+msgstr ""
+
+#. translators: %s - list name like "My Product"
+#: classes/admin/mailchimp-lists-field.php:101
+msgid "There are no interests in the list %s."
+msgstr ""
+
+#: classes/admin/settings-tab.php:31
+msgid "MailChimp"
+msgstr ""
+
+#: classes/admin/settings-tab.php:36
+msgid "Enter a valid <a>MailChimp API key</a> here to get started. You will need to have at least one MailChimp list set up."
+msgstr ""
+
+#: classes/admin/settings-tab.php:43
+msgid "Subscribe users to Mailchimp after booking confirmation"
+msgstr ""
+
+#: classes/admin/settings-tab.php:48
+msgid "MailChimp API Key"
+msgstr ""
+
+#: classes/admin/settings-tab.php:54
+msgid "Update Lists"
+msgstr ""
+
+#: classes/admin/settings-tab.php:55
+msgid "Refresh"
+msgstr ""
+
+#: classes/admin/settings-tab.php:56
+msgid "Get your current MailChimp lists and interests."
+msgstr ""
+
+#: classes/admin/settings-tab.php:64
+msgid "Subscribe New Customers To"
+msgstr ""
+
+#: classes/admin/settings-tab.php:65
+msgid "Select the lists and interests you wish a new customer to be subscribed by default."
+msgstr ""
+
+#: classes/admin/settings-tab.php:79
+msgid "Subscribe To"
+msgstr ""
+
+#: classes/admin/settings-tab.php:80
+msgid "Upgrade your version of Hotel Booking to at least 3.7 to manage MailChimp lists."
+msgstr ""
+
+#: classes/admin/settings-tab.php:87
+msgid "Double Opt-In"
+msgstr ""
+
+#: classes/admin/settings-tab.php:92
+msgid "Subscription Policy"
+msgstr ""
+
+#: classes/admin/settings-tab.php:94
+msgid "Subscribe automatically"
+msgstr ""
+
+#: classes/admin/settings-tab.php:95
+msgid "Enable double opt-in"
+msgstr ""
+
+#: classes/admin/settings-tab.php:96
+msgid "Ask the customer on the checkout page"
+msgstr ""
+
+#: classes/admin/settings-tab.php:102
+msgid "Checkbox Label on Checkout Page"
+msgstr ""
+
+#: classes/admin/settings-tab.php:103
+#: classes/settings.php:78
+msgid "Subscribe to our newsletter"
+msgstr ""
+
+#: classes/admin/settings-tab.php:107
+msgid "Checkbox Default"
+msgstr ""
+
+#. translators: Context: "The checkbox is checked by default".
+#: classes/admin/settings-tab.php:110
+msgid "Checked"
+msgstr ""
+
+#. translators: Context: "The checkbox is unchecked by default".
+#: classes/admin/settings-tab.php:112
+msgid "Unchecked"
+msgstr ""
+
+#: classes/admin/settings-tab.php:121
+msgid "E-Commerce Settings"
+msgstr ""
+
+#: classes/admin/settings-tab.php:124
+msgid "— Select —"
+msgstr ""
+
+#: classes/admin/settings-tab.php:129
+msgid "Connect To List"
+msgstr ""
+
+#: classes/admin/settings-tab.php:130
+msgid "Tie a Store to a specific Mailchimp list/audience. <b>After a Store is tied to a list/audience, it cannot be connected to a different list/audience.</b>"
+msgstr ""
+
+#: classes/admin/settings-tab.php:136
+msgid "Subscribe e-commerce customers"
+msgstr ""
+
+#: classes/admin/settings-tab.php:137
+msgid "Auto subscribe new customers during e-commerce actions."
+msgstr ""
+
+#: classes/admin/settings-tab.php:142
+msgid "Disconnect from current list/audience"
+msgstr ""
+
+#: classes/admin/settings-tab.php:143
+msgid "Untie a Store from the current list/audience. Will not remove any data from MailChimp - Products, Orders or Customers. You'll need to remove it manually to completely disconnect your site."
+msgstr ""
+
+#: classes/admin/settings-tab.php:149
+msgid "E-Commerce Sync Status"
+msgstr ""
+
+#: classes/admin/settings-tab.php:154
+msgid "Force Sync Now"
+msgstr ""
+
+#: classes/admin/settings-tab.php:160
+msgid "Cancel Sync"
+msgstr ""
+
+#: classes/admin/settings-tab.php:183
+msgid "License"
+msgstr ""
+
+#. translators: %s - list name. Example: "Tied to list/audience My Product".
+#: classes/admin/tied-mailchimp-list-field.php:30
+msgid "Tied to list/audience %s"
+msgstr ""
+
+#: classes/entities/mailchimp-cart.php:39
+msgid "Can't find the booking #%d to create MailChimp cart."
+msgstr ""
+
+#: classes/entities/mailchimp-cart.php:41
+#: classes/entities/mailchimp-order.php:40
+msgid "Booking #%d have no customer to connect with MailChimp."
+msgstr ""
+
+#: classes/entities/mailchimp-customer.php:41
+msgid "Can't find the booking #%d to create MailChimp customer."
+msgstr ""
+
+#: classes/entities/mailchimp-order-list.php:17
+msgid "Can't find the booking #%d to create MailChimp order list."
+msgstr ""
+
+#: classes/entities/mailchimp-order.php:38
+msgid "Can't find the booking #%d to create MailChimp order."
+msgstr ""
+
+#: classes/entities/mailchimp-product.php:37
+msgid "Can't find the room type #%d to create MailChimp product."
+msgstr ""
+
+#: classes/listeners/ajax.php:56
+msgid "Request does not pass security verification. Please refresh the page and try one more time."
+msgstr ""
+
+#: classes/listeners/ajax.php:80
+#: classes/listeners/ajax.php:108
+msgid "Something went wrong in the main plugin: no iteration number passed."
+msgstr ""
+
+#: classes/listeners/ajax.php:136
+msgid "Cancelled by user."
+msgstr ""
+
+#: classes/listeners/ajax.php:154
+#: classes/settings.php:139
+msgid "Never synced with MailChimp."
+msgstr ""
+
+#: classes/listeners/bookings-update.php:61
+msgid "MailChimp cart successfully added."
+msgstr ""
+
+#: classes/listeners/bookings-update.php:63
+msgid "Failed to add MailChimp cart. API response: \"%s\""
+msgstr ""
+
+#: classes/listeners/bookings-update.php:95
+msgid "MailChimp order successfully added."
+msgstr ""
+
+#: classes/listeners/bookings-update.php:97
+msgid "Failed to add MailChimp order. API response: \"%s\""
+msgstr ""
+
+#: classes/listeners/bookings-update.php:149
+#: classes/listeners/bookings-update.php:183
+msgid "MailChimp order successfully cancelled."
+msgstr ""
+
+#: classes/listeners/bookings-update.php:153
+msgid "Cancelled cart removed from MailChimp."
+msgstr ""
+
+#: classes/listeners/bookings-update.php:187
+msgid "Abandoned cart removed from MailChimp."
+msgstr ""
+
+#: classes/listeners/subscription.php:67
+msgid "Customer subscription details have been updated in MailChimp successfully."
+msgstr ""
+
+#: classes/listeners/subscription.php:69
+msgid "Failed to update customer subscription details in MailChimp. API response: \"%s\""
+msgstr ""
+
+#: classes/services/store-sync.php:21
+msgid "Preprocessing..."
+msgstr ""
+
+#: classes/services/store-sync.php:89
+msgid "The store is not connected to any list/audience."
+msgstr ""
+
+#: classes/services/store-sync.php:156
+msgid "The booking is in sync with MailChimp now."
+msgstr ""
+
+#: classes/services/store-sync.php:174
+msgid "In progress... (%d%% done)"
+msgstr ""
+
+#: classes/services/store-sync.php:180
+msgid "In sync with MailChimp."
+msgstr ""
+
+#: mphb-mailchimp.php:36
+msgid "Your version of PHP is below the minimum version of PHP required by Hotel Booking Mailchimp Addon. Please contact your host and request that your version be upgraded to 5.4 or later."
+msgstr ""

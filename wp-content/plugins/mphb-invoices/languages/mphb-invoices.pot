@@ -1,0 +1,297 @@
+# Copyright (C) 2024 MotoPress
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hotel Booking PDF Invoices 1.4.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mphb-invoices\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-08-28T21:03:24+03:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: mphb-invoices\n"
+
+#. Plugin Name of the plugin
+msgid "Hotel Booking PDF Invoices"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://motopress.com/products/hotel-booking-invoices/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Send automated PDF invoices with the booking and payment details to your guests."
+msgstr ""
+
+#. Author of the plugin
+msgid "MotoPress"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://motopress.com/"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:19
+msgid "The License Key is required in order to get automatic plugin updates and support. You can manage your License Key in your personal account. <a>Learn more</a>."
+msgstr ""
+
+#: classes/admin/license-settings-group.php:28
+msgid "License Key"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:40
+msgid "Status"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:47
+msgid "Inactive"
+msgstr ""
+
+#. translators: %s - date in format d.m.Y
+#: classes/admin/license-settings-group.php:55
+msgid "Valid until %s"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:57
+msgid "Valid (Lifetime)"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:62
+msgid "Disabled"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:66
+msgid "Expired"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:70
+msgid "Invalid"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:74
+msgid "Your License Key does not match the installed plugin. <a>How to fix this.</a>"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:81
+msgid "Product ID is not valid"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:91
+msgid "Action"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:96
+msgid "Activate License"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:99
+msgid "Deactivate License"
+msgstr ""
+
+#: classes/admin/license-settings-group.php:102
+msgid "Renew License"
+msgstr ""
+
+#: classes/admin/settings-tab.php:29
+msgid "Invoices"
+msgstr ""
+
+#: classes/admin/settings-tab.php:37
+msgid "Send Invoice in Email"
+msgstr ""
+
+#: classes/admin/settings-tab.php:38
+msgid "Copy and paste the %pdf_invoice% tag to the Approved booking email template to send invoice as an attachment."
+msgstr ""
+
+#: classes/admin/settings-tab.php:42
+msgid "Invoice Title"
+msgstr ""
+
+#: classes/admin/settings-tab.php:48
+msgid "Invoice Number Format"
+msgstr ""
+
+#: classes/admin/settings-tab.php:49
+msgid "Select one or more tags from the available options or combine with text (e.g., ABC %YYYY%/%INVOICE_ID% &#8594; ABC 2024/0501)"
+msgstr ""
+
+#: classes/admin/settings-tab.php:56
+msgid "Starting Invoice ID"
+msgstr ""
+
+#: classes/admin/settings-tab.php:57
+msgid "The starting number of the invoice ID. Add leading zeros to set the minimum invoice ID length."
+msgstr ""
+
+#: classes/admin/settings-tab.php:64
+msgid "Company Logo"
+msgstr ""
+
+#: classes/admin/settings-tab.php:72
+msgid "Company Name"
+msgstr ""
+
+#: classes/admin/settings-tab.php:73
+msgid "Company name shown on invoice."
+msgstr ""
+
+#: classes/admin/settings-tab.php:78
+msgid "Company Information"
+msgstr ""
+
+#: classes/admin/settings-tab.php:79
+msgid "Company information shown on invoice."
+msgstr ""
+
+#: classes/admin/settings-tab.php:85
+msgid "Additional Information"
+msgstr ""
+
+#: classes/admin/settings-tab.php:86
+msgid "The text entered in this box will appear at the bottom of the invoice."
+msgstr ""
+
+#: classes/admin/settings-tab.php:92
+msgid "Invoice Link on Confirmation Page"
+msgstr ""
+
+#: classes/admin/settings-tab.php:93
+msgid "Add a link to a PDF invoice to the booking confirmation page on your site."
+msgstr ""
+
+#: classes/admin/settings-tab.php:119
+msgid "License"
+msgstr ""
+
+#: classes/email/tags-processor.php:22
+msgid "PDF Invoice"
+msgstr ""
+
+#: classes/meta-boxes/invoice-meta-box.php:43
+msgid "Generate Invoice"
+msgstr ""
+
+#: classes/number/invoice-number-tags-processor.php:32
+msgid "Booking ID"
+msgstr ""
+
+#: classes/number/invoice-number-tags-processor.php:33
+msgid "Sequential Invoice ID"
+msgstr ""
+
+#: classes/number/invoice-number-tags-processor.php:34
+msgid "Day of the month without leading zeros"
+msgstr ""
+
+#: classes/number/invoice-number-tags-processor.php:35
+msgid "Day of the month, 2 digits with leading zeros"
+msgstr ""
+
+#: classes/number/invoice-number-tags-processor.php:36
+msgid "Numeric representation of a month, without leading zeros"
+msgstr ""
+
+#: classes/number/invoice-number-tags-processor.php:37
+msgid "Numeric representation of a month, with leading zeros"
+msgstr ""
+
+#: classes/number/invoice-number-tags-processor.php:38
+msgid "A two digit representation of a year"
+msgstr ""
+
+#: classes/number/invoice-number-tags-processor.php:39
+msgid "A full numeric representation of a year, at least 4 digits"
+msgstr ""
+
+#: classes/number/invoice-number-tags-processor.php:40
+msgid "24-hour format of an hour without leading zeros"
+msgstr ""
+
+#: classes/number/invoice-number-tags-processor.php:41
+msgid "24-hour format of an hour with leading zeros"
+msgstr ""
+
+#: classes/number/invoice-number-tags-processor.php:42
+msgid "Minutes with leading zeros"
+msgstr ""
+
+#: classes/number/invoice-number-tags-processor.php:43
+msgid "Seconds with leading zeros"
+msgstr ""
+
+#: classes/number/invoice-number-tags-processor.php:180
+msgid "Available Tags"
+msgstr ""
+
+#: classes/pdf/pdf-helper.php:221
+msgid "Page %1$s of %2$s"
+msgstr ""
+
+#: classes/pdf/pdf-helper.php:279
+msgid "Payment Details"
+msgstr ""
+
+#: classes/pdf/pdf-helper.php:280
+msgid "Booking Details"
+msgstr ""
+
+#: classes/pdf/pdf-helper.php:281
+msgid "Booking"
+msgstr ""
+
+#: classes/pdf/pdf-helper.php:282
+msgid "Date"
+msgstr ""
+
+#: classes/pdf/pdf-helper.php:283
+msgid "Check In"
+msgstr ""
+
+#: classes/pdf/pdf-helper.php:284
+msgid "Check Out"
+msgstr ""
+
+#: classes/pdf/pdf-helper.php:285
+msgid "Invoice Number"
+msgstr ""
+
+#: classes/pdf/pdf-helper.php:286
+msgid "Invoice Date"
+msgstr ""
+
+#: includes/actions-and-filters.php:11
+#: includes/functions.php:40
+msgid "Invoice"
+msgstr ""
+
+#: includes/functions.php:39
+msgid "Open invoice in PDF"
+msgstr ""
+
+#: includes/functions.php:57
+#: includes/functions.php:73
+#: includes/functions.php:119
+#: includes/functions.php:132
+#: includes/functions.php:135
+msgid "No booking found!"
+msgstr ""
+
+#: includes/functions.php:76
+msgid "You don't have permissions for this action!"
+msgstr ""
+
+#: includes/functions.php:94
+msgid "View Invoice"
+msgstr ""
+
+#: includes/mphb-invoice-dependency.php:42
+msgid "Hotel Booking PDF Invoice plugin requires activated Hotel Booking plugin version %s or higher."
+msgstr ""
+
+#: mphb-invoices.php:33
+msgid "Your version of PHP is below the minimum version of PHP required by Hotel Booking Invoices Addon. Please contact your host and request that your version be upgraded to 7.1 or later."
+msgstr ""
