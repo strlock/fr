@@ -2706,13 +2706,26 @@ class Themo_Widget_Accommodation_Listing_FR extends Widget_Base {
                                     <div class="thmv-preface"><?= $preface ?></div>
                                 <?php endif; ?>
                             <?php endif; ?>
+                        <?php if (!empty($description)): ?>
+                            <p class="thmv-description"><?= esc_html($description) ?></p>
+                        <?php endif; ?>
                         <?php
-                        $description = 'TEST';
+                        if(!empty($list->ID)) {
+                            $roomType = MPHB()->getRoomTypeRepository()->findById( $list->ID );
+                            $capacity = $roomType->calcTotalCapacity();
+                            $size = $roomType->getSize();
+                            echo '<div class="listing-description">'.
+                                       '<div>'.
+                                           '<img src="'.site_url().'/wp-content/themes/bellevuex-child/images/icons/person.svg" />'.
+                                           '<span>'.$capacity.'<br/>Personen</span>'.
+                                       '</div>'.
+                                       '<div>'.
+                                           '<img src="'.site_url().'/wp-content/themes/bellevuex-child/images/icons/area.svg" />'.
+                                           '<span>'.$size.'m²</span>'.
+                                       '</div>'.
+                                   '</div>';
+                        }
                         ?>
-                            <?php if (!empty($description)): ?>
-                                <p class="thmv-description"><?= esc_html($description) ?></p>
-                            <?php endif; ?>
-
                             <?php
                             if (in_array($listingStyle, array(1, 6))):
                                 ?>

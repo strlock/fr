@@ -169,7 +169,7 @@ abstract class Controls_Stack extends Base_Object {
 	 *
 	 * @var array
 	 */
-	private $render_attributes = [];
+	public $render_attributes = [];
 
 	/**
 	 * Get element name.

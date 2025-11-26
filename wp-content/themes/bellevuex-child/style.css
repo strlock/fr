@@ -130,4 +130,27 @@ h1, .h1 h1 {
   color: #fff !important;
 }
 
+.elementor-widget-themo-accommodation-listing .listing-description {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  font-size: 16px;
+  color: #074365;
+  margin-bottom: 20px;
+}
+.elementor-widget-themo-accommodation-listing .listing-description div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  line-height: 16px;
+  gap: 4px;
+}
+.elementor-widget-themo-accommodation-listing .listing-description div span {
+  display: inline-block;
+}
+.elementor-widget-themo-accommodation-listing .thmv-title {
+  margin-bottom: 12px !important;
+}
+
 /*# sourceMappingURL=style.css.map */

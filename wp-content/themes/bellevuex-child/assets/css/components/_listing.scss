@@ -26,3 +26,31 @@
         color: #fff !important;
     }
 }
+
+.elementor-widget-themo-accommodation-listing {
+    .listing-description {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        font-size: 16px;
+        color: #074365;
+        margin-bottom: 20px;
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 32px;
+            line-height: 16px;
+            gap: 4px;
+
+             span {
+                 display: inline-block;
+             }
+        }
+    }
+
+    .thmv-title {
+        margin-bottom: 12px !important;
+    }
+}
