@@ -1,11 +1,20 @@
 <?php
 
-namespace Elementor;
+
+use Elementor\Controls_Manager;
+use Elementor\Group_Control_Border;
+use Elementor\Group_Control_Image_Size;
+use Elementor\Group_Control_Typography;
+use Elementor\Icons_Manager;
+use Elementor\Plugin;
+use Elementor\Repeater;
+use Elementor\Utils;
+use Elementor\Widget_Base;
 
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
-class Themo_Widget_Accommodation_Listing extends Widget_Base {
+class Themo_Widget_Accommodation_Listing_FR extends Widget_Base {
 
     var $totalIcons = 12;
     var $imageKey = 'thmv_image';
@@ -2697,6 +2706,9 @@ class Themo_Widget_Accommodation_Listing extends Widget_Base {
                                     <div class="thmv-preface"><?= $preface ?></div>
                                 <?php endif; ?>
                             <?php endif; ?>
+                        <?php
+                        $description = 'TEST';
+                        ?>
                             <?php if (!empty($description)): ?>
                                 <p class="thmv-description"><?= esc_html($description) ?></p>
                             <?php endif; ?>
@@ -2769,7 +2781,6 @@ class Themo_Widget_Accommodation_Listing extends Widget_Base {
     protected function content_template() {
         
     }
+}
 
-    }
-
-Plugin::instance()->widgets_manager->register(new Themo_Widget_Accommodation_Listing());
+Plugin::instance()->widgets_manager->register(new Themo_Widget_Accommodation_Listing_FR());

@@ -102,7 +102,7 @@ h1, .h1 h1 {
   margin: 0 auto;
 }
 
-.elementor-widget-themo-accommodation-listing .elementor-row.thmv-style-1 .thmv-learn-btn {
+.elementor-widget-themo-accommodation-listing .elementor-row .thmv-learn-btn {
   display: inline-block;
   margin-bottom: 0;
   font-weight: 700;
@@ -117,15 +117,15 @@ h1, .h1 h1 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: var(--e-global-color-thmv_primary) !important;
-  border-color: var(--e-global-color-thmv_primary) !important;
+  background-color: #074365 !important;
+  border-color: #074365 !important;
   text-transform: none !important;
   height: 40px;
   line-height: 40px !important;
   width: 187px;
   padding: 0 !important;
 }
-.elementor-widget-themo-accommodation-listing .elementor-row.thmv-style-1 .thmv-learn-btn:hover {
+.elementor-widget-themo-accommodation-listing .elementor-row .thmv-learn-btn:hover {
   opacity: 0.85 !important;
   color: #fff !important;
 }
