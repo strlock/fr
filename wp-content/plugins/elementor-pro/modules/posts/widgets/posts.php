@@ -56,7 +56,6 @@ class Posts extends Posts_Base {
 		$this->add_skin( new Skins\Skin_Classic( $this ) );
 		$this->add_skin( new Skins\Skin_Cards( $this ) );
 		$this->add_skin( new Skins\Skin_Full_Content( $this ) );
-		$this->add_skin( new Skins\Skin_FR( $this ) );
 	}
 
 	protected function register_controls() {

@@ -3,6 +3,7 @@ namespace ElementorPro\Modules\Posts\Skins;
 
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Box_Shadow;
+use ElementorPro\Core\Utils as ProUtils;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -191,4 +192,46 @@ class Skin_FR extends Skin_Base {
 
 		$this->end_controls_section();
 	}
+
+    protected function render_excerpt() {
+        add_filter( 'excerpt_more', [ $this, 'filter_excerpt_more' ], 20 );
+        add_filter( 'excerpt_length', [ $this, 'filter_excerpt_length' ], 20 );
+
+        if ( ! $this->get_instance_value( 'show_excerpt' ) ) {
+            return;
+        }
+
+        add_filter( 'excerpt_more', [ $this, 'filter_excerpt_more' ], 20 );
+        add_filter( 'excerpt_length', [ $this, 'filter_excerpt_length' ], 20 );
+
+        ?>
+        <div class="elementor-post__excerpt">
+            <?php
+                // Force the manually-generated Excerpt length as well if the user chose to enable 'apply_to_custom_excerpt'.
+                the_content();
+            ?>
+        </div>
+        <?php
+
+        remove_filter( 'excerpt_length', [ $this, 'filter_excerpt_length' ], 20 );
+        remove_filter( 'excerpt_more', [ $this, 'filter_excerpt_more' ], 20 );
+    }
+
+    protected function render_post_header() {
+        ?>
+    <article <?php post_class( [ 'elementor-post elementor-post-viewpoint elementor-grid-item' ] ); ?> role="listitem">
+        <?php
+    }
+
+    protected function render_post() {
+        $this->render_post_header();
+        $this->render_thumbnail();
+        $this->render_text_header();
+        $this->render_title();
+//        $this->render_meta_data();
+        $this->render_excerpt();
+        $this->render_read_more();
+        $this->render_text_footer();
+        $this->render_post_footer();
+    }
 }
