@@ -1,0 +1,58 @@
+.sp-blog {
+    p {
+        margin: 0;
+    }
+
+    .thmv-blog-post {
+        .post-title {
+            &, & a {
+                font-size: 24px !important;
+                font-weight: 700 !important;
+                color: #074365 !important;
+            }
+
+            margin-bottom: 12px !important;
+        }
+
+        .thmv-info .thmv-learn-btn {
+            svg {
+                display: none;
+            }
+
+            background-color: #074365;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            vertical-align: middle;
+            color: #fff;
+            width: 187px;
+            height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .entry-content {
+            &, & p {
+                color: #074365 !important;
+                font-weight: 400 !important;
+                font-size: 16px !important;
+                line-height: 140% !important;
+                vertical-align: middle !important;
+                height: 110px;
+                overflow: hidden;
+            }
+
+            & p {
+                margin: 0 !important;
+            }
+
+            margin: 0 0 20px 0 !important;
+        }
+    }
+}

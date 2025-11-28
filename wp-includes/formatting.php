@@ -3967,6 +3967,7 @@ function wp_trim_excerpt( $text = '', $post = null ) {
 		$text = excerpt_remove_blocks( $text );
 		$text = excerpt_remove_footnotes( $text );
 
+
 		/*
 		 * Temporarily unhook wp_filter_content_tags() since any tags
 		 * within the excerpt are stripped out. Modifying the tags here
