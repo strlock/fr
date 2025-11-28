@@ -1,0 +1,27 @@
+.btn {
+    &.btn-cta-primary {
+        background-color: #69A042;
+        width: 248px;
+        height: 63px;
+        line-height: 20px;
+        gap: 10px;
+        padding: 0 !important;
+        font-weight: 900;
+        font-size: 14px;
+        text-align: center;
+        vertical-align: middle;
+        margin: 0 !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+
+        &:after {
+            content: url("images/icons/whatsapp.svg");
+            width: 37px;
+            height: 37px;
+            display: inline-block;
+            margin-left: 5px;
+        }
+    }
+}

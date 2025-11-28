@@ -13,9 +13,13 @@ Domain Path:    /languages/
 /* = Theme customization starts here
 -------------------------------------------------------------- */
 
+@import "assets/css/_modifiers.scss";
 @import "assets/css/components/_headings.scss";
 @import "assets/css/components/_startpage.scss";
+@import "assets/css/components/_buttons.scss";
 @import "assets/css/components/_menu.scss";
 @import "assets/css/components/_forms.scss";
 @import "assets/css/components/_specialoffers.scss";
 @import "assets/css/components/_listing.scss";
+@import "assets/css/components/_viewpoints.scss";
+@import "assets/css/components/_sp-video.scss";

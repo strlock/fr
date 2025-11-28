@@ -1,0 +1,8 @@
+.flex-direction-column, .flex-direction-column .elementor-widget-wrap {
+    flex-direction: column !important;
+}
+
+.justify-content-start, .justify-content-start .elementor-widget-wrap {
+    justify-content: flex-start !important;
+    align-content: flex-start !important;
+}
