@@ -266,6 +266,11 @@ h1, .h1 h1 {
 
 .sp-blog p {
   margin: 0;
+  display: flex;
+  align-items: center;
+}
+.sp-blog p:empty {
+  display: none;
 }
 .sp-blog .thmv-blog-post .post-title {
   margin-bottom: 12px !important;
@@ -309,6 +314,99 @@ h1, .h1 h1 {
 }
 .sp-blog .thmv-blog-post .entry-content p {
   margin: 0 !important;
+}
+
+.sp-reviews .elementor-testimonial {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid #7E7E7E;
+  padding: 20px;
+  gap: 12px;
+}
+.sp-reviews .elementor-testimonial {
+  border-radius: 0 !important;
+}
+.sp-reviews .elementor-testimonial .elementor-testimonial__header {
+  border: none;
+  flex: 0 0 50px;
+  padding: 0;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sp-reviews .elementor-testimonial .elementor-testimonial__header img {
+  max-width: 50px;
+  width: 100%;
+  height: 50px !important;
+  border-radius: 25px;
+}
+.sp-reviews .elementor-testimonial .elementor-testimonial__icon {
+  display: none;
+}
+.sp-reviews .elementor-testimonial .elementor-testimonial__content {
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.sp-reviews .elementor-icon-box-description {
+  display: none !important;
+}
+.sp-reviews .elementor-widget-reviews .swiper-slide {
+  border-radius: 0;
+}
+.sp-reviews .elementor-widget-reviews .elementor-main-swiper, .sp-reviews .elementor-widget-testimonial-carousel .elementor-main-swiper {
+  width: 100%;
+  padding: 0;
+}
+.sp-reviews .elementor-icon-box-title {
+  margin: 0;
+}
+.sp-reviews .elementor-widget-themo-header {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+footer {
+  background-color: #04293F !important;
+}
+footer .footer-payments .elementor-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 11px;
+  margin: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .hfe-nav-menu-icon {
+    padding: 5px !important;
+  }
+  .hfe-nav-menu {
+    padding: 10px !important;
+  }
+  .hfe-nav-menu li.menu-item a.hfe-menu-item {
+    padding: 5px !important;
+  }
+}
+@media (max-width: 1024px) {
+  .thmv-inner-right.thmv-inner-right-1 {
+    max-width: unset;
+  }
+  .startpage-top-1 {
+    position: relative;
+  }
+  .startpage-top-1:before {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .elementor-widget-themo-accommodation-listing .elementor-row .thmv-column {
+    margin-bottom: 0 !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

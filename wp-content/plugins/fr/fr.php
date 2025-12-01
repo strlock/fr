@@ -18,6 +18,8 @@ final class FR {
         add_filter( 'elementor/widgets/register', function() {
             Plugin::instance()->widgets_manager->unregister('themo-accommodation-listing');
             require_once FR_THEME_PATH . 'aloha-powerpack/elements/accommodation_listing.php';
+            Plugin::instance()->widgets_manager->unregister('themo-blog');
+            require_once FR_THEME_PATH . 'aloha-powerpack/elements/blog_2.php';
         }, 11);
     }
 }

@@ -1,0 +1,13 @@
+@media (max-width: 1024px) {
+    .thmv-inner-right.thmv-inner-right-1 {
+        max-width: unset;
+    }
+
+    .startpage-top-1 {
+        position: relative;
+
+        &:before {
+            display: none;
+        }
+    }
+}
