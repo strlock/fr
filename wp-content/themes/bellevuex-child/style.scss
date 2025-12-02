@@ -14,6 +14,8 @@ Domain Path:    /languages/
 -------------------------------------------------------------- */
 
 @import "assets/css/_modifiers.scss";
+@import "assets/css/_reset.scss";
+@import "assets/css/_icons.scss";
 @import "assets/css/components/_headings.scss";
 @import "assets/css/components/_startpage.scss";
 @import "assets/css/components/_buttons.scss";
@@ -25,7 +27,12 @@ Domain Path:    /languages/
 @import "assets/css/components/_sp-video.scss";
 @import "assets/css/components/_sp-blog.scss";
 @import "assets/css/components/_sp-reviews.scss";
+@import "assets/css/components/_header.scss";
 @import "assets/css/components/_footer.scss";
+@import "assets/css/components/_adv.scss";
+@import "assets/css/components/_highlights.scss";
+@import "assets/css/components/_mtb.scss";
+@import "assets/css/components/_sp-offers.scss";
 @import "assets/css/responsive/components/_menu.scss";
 @import "assets/css/responsive/components/_startpage.scss";
 @import "assets/css/responsive/components/_listing.scss";

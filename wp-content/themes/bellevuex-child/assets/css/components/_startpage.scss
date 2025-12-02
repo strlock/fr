@@ -29,6 +29,56 @@
             display: none !important;
         }
     }
+
+    .e-hosted-video {
+        max-width: 960px !important;
+
+        video, .elementor-custom-embed-image-overlay {
+            width: 960px !important;
+            height: 734px !important;
+        }
+    }
+
+    .btn-standard-primary, .btn-cta-primary {
+        margin: 0 !important;
+        width: 172px !important;
+        height: 51px !important;
+        color: #fff !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: none !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+    }
+
+    .elementor-icon-box-title {
+        margin: 0 !important;
+    }
+
+    .btn-cta-primary {
+        background-color: #2BB826 !important;
+        position: relative;
+        justify-content: flex-start !important;
+        padding: 0 0 0 25px !important;
+        margin-left: 15px !important;
+
+        &:after {
+            width: 29px !important;
+            height: 29px !important;
+            content: "" !important;
+            background: url("images/icons/whatsapp.svg") no-repeat center center;
+            background-size: contain;
+            position: absolute;
+            top: calc(50% - 14.5px);
+            right: 11px;
+        }
+    }
+
+    .btn-standard-primary {
+        padding: 0 !important;
+        background-color: #074365 !important;
+    }
 }
 
 .thmv-inner-right.thmv-inner-right-1 {
@@ -39,10 +89,4 @@
 
 .elementor-31 .elementor-element.elementor-element-47af772c .elementor-icon-box-content .elementor-icon-box-description {
     margin-bottom: 40px;
-}
-
-.elementor-31 {
-    h1 {
-        margin-top: -11px !important;
-    }
 }
