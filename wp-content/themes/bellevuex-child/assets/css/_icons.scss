@@ -1,0 +1,15 @@
+.fa-facebook {
+    position: relative;
+
+    &:before {
+        content: "" !important;
+        background: url("images/icons/fa-facebook.svg") !important;
+        width: 11px;
+        height: 20px;
+        background-size: contain;
+        position: absolute;
+        top: calc(50% - 10px) !important;
+        left: calc(50% - 6px) !important;
+        transform: none !important;
+    }
+}

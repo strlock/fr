@@ -1,0 +1,13 @@
+.sp-highlights {
+    .thmv-inner-right {
+        @media (max-width: 1024px) {
+            margin-left: 0 !important;
+        }
+    }
+
+    .thmv-inner-container {
+        @media (max-width: 1024px) {
+            max-width: unset !important;
+        }
+    }
+}

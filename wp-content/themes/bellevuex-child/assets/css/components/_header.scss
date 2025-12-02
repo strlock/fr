@@ -1,0 +1,19 @@
+#thhf-masthead-sticky {
+    background-color: #fff;
+}
+
+.sp-header {
+    padding: 14px 0 10px 0 !important;
+}
+
+@media (max-width: 1024px) {
+    .sp-header {
+        width: 100% !important;
+
+        .elementor-column-gap-no {
+            margin: 0 !important;
+            padding: 10px !important;
+            width: 100% !important;
+        }
+    }
+}
