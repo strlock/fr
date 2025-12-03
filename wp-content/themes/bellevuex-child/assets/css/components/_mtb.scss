@@ -1,0 +1,28 @@
+.sp-mtb {
+    @media (max-width: 1024px) {
+        .elementor-widget-image {
+            margin: 0 auto 0 auto !important;
+
+            .elementor-widget-container {
+                max-height: 300px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+
+            img {
+                width: 100% !important;
+            }
+        }
+
+        .thmv-inner-left {
+            margin-right: 0 !important;
+        }
+
+        .thmv-inner-container {
+            max-width: unset !important;
+        }
+    }
+}
