@@ -6,6 +6,11 @@
         justify-content: space-between;
         align-items: flex-end;
         gap: 15px;
+        
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
+            padding-bottom: 30px;
+        }
     }
 
     .mphb_sc_search-wrapper {
@@ -32,6 +37,10 @@
 
             select, input {
                 margin-top: 4px !important;
+            }
+
+            @media (max-width: 1024px) {
+                padding-bottom: 0 !important;
             }
         }
 
