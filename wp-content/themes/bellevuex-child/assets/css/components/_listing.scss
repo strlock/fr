@@ -16,7 +16,7 @@
     background-color: #074365 !important;
     border-color: #074365 !important;
     text-transform: none !important;
-    height: 40px;
+    height: 48px;
     line-height: 40px !important;
     width: 187px;
     padding: 0 !important;
@@ -54,3 +54,26 @@
         margin-bottom: 12px !important;
     }
 }
+
+.sp-rooms {
+    h2 {
+        margin-bottom: 5px;
+    }
+
+    .elementor-icon-box-description {
+        margin-bottom: 35px !important;
+    }
+
+    .thmv-info {
+        margin-top: 16px !important;
+    }
+
+    .thmv-title {
+        margin-bottom: 15px !important;
+    }
+
+    .elementor-widget-themo-accommodation-listing .elementor-row .thmv-column {
+        margin-bottom: 20px;
+    }
+}
+

@@ -6,3 +6,13 @@
     justify-content: flex-start !important;
     align-content: flex-start !important;
 }
+
+.d-none {
+    display: none !important;
+}
+
+.elementor-hidden-mobile {
+    @media (max-width: 768px) {
+        display: none !important;
+    }
+}

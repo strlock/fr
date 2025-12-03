@@ -1467,7 +1467,6 @@ class Style
     function get_line_height()
     {
         $line_height = $this->_props_computed["line_height"];
-
         if ($line_height === "normal") {
             return self::$default_line_height * $this->__get("font_size");
         }
