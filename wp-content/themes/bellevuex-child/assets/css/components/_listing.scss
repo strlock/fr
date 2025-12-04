@@ -1,5 +1,7 @@
 .elementor-widget-themo-accommodation-listing .elementor-row .thmv-learn-btn {
-    display: inline-block;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     margin-bottom: 0;
     font-weight: 700;
     text-align: center;
