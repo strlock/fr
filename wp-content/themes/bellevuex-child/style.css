@@ -600,8 +600,10 @@ footer .footer-payments .elementor-container {
   vertical-align: middle;
   margin: 0 !important;
 }
-.sp-adv .elementor-widget-themo-accommodation-listing .thmv-column {
-  margin-bottom: 0 !important;
+@media (max-width: 1024px) {
+  .sp-adv .elementor-widget-themo-accommodation-listing .thmv-column {
+    margin-bottom: 15px !important;
+  }
 }
 .sp-adv .btn-1.btn.th-btn.btn-standard-primary {
   font-family: "Work Sans", sans-serif !important;
@@ -611,6 +613,11 @@ footer .footer-payments .elementor-container {
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .sp-adv .th-btn-wrap {
+    margin-top: 0 !important;
+  }
 }
 
 @media (max-width: 1024px) {
