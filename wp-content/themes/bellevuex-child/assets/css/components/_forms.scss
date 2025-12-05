@@ -1,4 +1,23 @@
 .sp-search-form {
+    .mphb_sc_search-form {
+        display: flex;
+        max-width: 882px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 15px;
+        
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
+            padding-bottom: 30px;
+        }
+    }
+
+    .mphb_sc_search-wrapper {
+        display: flex !important;
+        justify-content: center;
+    }
+
     .frm_forms form label, .with_frm_style label.frm_primary_label, .with_frm_style.frm_login_form label, .frm_style_formidable-style.with_frm_style label.frm_primary_label, .frm_style_formidable-style.with_frm_style.frm_login_form label, .frm_style_formidable-style.with_frm_style .frm_radio label, .frm_style_formidable-style.with_frm_style .frm_checkbox label {
         font-size: 12px;
         color: #121212;
@@ -19,6 +38,10 @@
             select, input {
                 margin-top: 4px !important;
             }
+
+            @media (max-width: 1024px) {
+                padding-bottom: 0 !important;
+            }
         }
 
         .frm_form_field, .frm_submit {
@@ -35,5 +58,14 @@
         &::placeholder {
             color: #000 !important;
         }
+    }
+
+    .th-conversion form input, .th-conversion form select {
+        margin: 0 !important;
+        height: 54px !important;
+    }
+
+    .mphb_sc_search-submit-button-wrapper .frm_submit {
+        width: 215px;
     }
 }
