@@ -6,4 +6,10 @@
     .elementor-icon-box-description {
         margin-bottom: 40px;
     }
+
+    @media (max-width: 768px) {
+        .elementor-container.elementor-column-gap-no {
+            width: 100% !important;
+        }
+    }
 }

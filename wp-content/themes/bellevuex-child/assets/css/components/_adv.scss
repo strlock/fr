@@ -42,10 +42,6 @@
                 margin: 0 !important;
             }
         }
-
-        .thmv-column {
-            margin-bottom: 0 !important;
-        }
     }
 
     .btn-1.btn.th-btn.btn-standard-primary {
@@ -56,5 +52,33 @@
         text-align: center;
         vertical-align: middle;
         text-transform: uppercase;
+        
+        @media (max-width: 768px) {
+            font-size: 14px;
+            height: 48px;
+            line-height: 16px;
+            padding: 0 10px;
+            text-transform: none;
+            margin: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .adv-bottom-button {
+        .th-btn-wrap {
+            margin-top: 0;
+        }
+
+        .elementor-icon-box-title, .elementor-icon-box-description {
+            display: none;
+        }
+    }
+
+    .elementor-widget-themo-accommodation-listing .elementor-row .thmv-column {
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
+        }
     }
 }

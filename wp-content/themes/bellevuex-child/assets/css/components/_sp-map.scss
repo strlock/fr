@@ -6,4 +6,10 @@
     .elementor-element-populated P {
         width: 100%;
     }
+
+    @media (max-width: 768px) {
+        .elementor-container.elementor-column-gap-default {
+            width: 100% !important;
+        }
+    }
 }

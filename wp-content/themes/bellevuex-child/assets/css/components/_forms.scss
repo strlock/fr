@@ -47,6 +47,14 @@
         .frm_form_field, .frm_submit {
             line-height: 1;
             margin-bottom: 0 !important;
+
+            @media (max-width: 576px) {
+                width: 100% !important;
+
+                select, input {
+                    width: 100% !important;
+                }
+            }
         }
     }
 
