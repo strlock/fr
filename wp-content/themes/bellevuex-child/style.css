@@ -563,6 +563,7 @@ footer .footer-payments .elementor-container {
 
 .sp-adv .elementor-icon-box-title {
   text-align: center;
+  margin-bottom: 12px;
 }
 @media (max-width: 1024px) {
   .sp-adv .elementor-icon-box-title {
@@ -571,6 +572,7 @@ footer .footer-payments .elementor-container {
 }
 .sp-adv .elementor-icon-box-description {
   text-align: center;
+  margin-bottom: 24px;
 }
 @media (max-width: 1024px) {
   .sp-adv .elementor-icon-box-description {
@@ -581,24 +583,76 @@ footer .footer-payments .elementor-container {
   text-align: center;
 }
 .sp-adv .elementor-widget-themo-accommodation-listing .elementor-row .thmv-title {
-  margin-bottom: 4px !important;
   width: 100%;
   display: block;
   max-width: unset !important;
   text-align: center !important;
+  margin-bottom: 0 !important;
+  min-height: 35px;
+  line-height: 35px;
 }
-@media (max-width: 1024px) {
+.sp-adv .elementor-widget-themo-accommodation-listing .elementor-row .thmv-title, .sp-adv .elementor-widget-themo-accommodation-listing .elementor-row .thmv-title a {
+  font-size: 16px !important;
+}
+@media (max-width: 768px) {
   .sp-adv .elementor-widget-themo-accommodation-listing .elementor-row .thmv-title {
-    font-size: 16px !important;
+    height: 30px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+  .sp-adv .elementor-widget-themo-accommodation-listing .elementor-row .thmv-title, .sp-adv .elementor-widget-themo-accommodation-listing .elementor-row .thmv-title a {
+    font-size: 14px !important;
   }
 }
 .sp-adv .elementor-widget-themo-accommodation-listing .elementor-row .thmv-preface {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 140%;
-  text-align: center;
   vertical-align: middle;
   margin: 0 !important;
+  background-color: #074365;
+  text-align: center;
+  color: #fff !important;
+  line-height: 41px;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  height: 41px;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .sp-adv .elementor-widget-themo-accommodation-listing .elementor-row .thmv-preface {
+    font-size: 16px;
+    height: 35px;
+    line-height: 35px;
+  }
+}
+.sp-adv .elementor-widget-themo-accommodation-listing .elementor-row .thmv-info {
+  margin-top: 0 !important;
+  background-color: rgba(7, 67, 101, 0.8);
+  font-weight: 700;
+  font-size: 16px;
+  height: 35px;
+  overflow: hidden;
+  line-height: 35px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 !important;
+  display: block;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .sp-adv .elementor-widget-themo-accommodation-listing .elementor-row .thmv-info {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+}
+.sp-adv .elementor-widget-themo-accommodation-listing .elementor-row .thmv-info, .sp-adv .elementor-widget-themo-accommodation-listing .elementor-row .thmv-info a {
+  color: #fff;
+}
+.sp-adv .elementor-widget-themo-accommodation-listing .thmv-column {
+  margin-bottom: 0 !important;
 }
 @media (max-width: 1024px) {
   .sp-adv .elementor-widget-themo-accommodation-listing .thmv-column {
@@ -617,6 +671,9 @@ footer .footer-payments .elementor-container {
 @media (max-width: 1024px) {
   .sp-adv .th-btn-wrap {
     margin-top: 0 !important;
+  }
+  .sp-adv .elementor-container.elementor-column-gap-default {
+    width: 100% !important;
   }
 }
 

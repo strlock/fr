@@ -1,6 +1,7 @@
 .sp-adv {
     .elementor-icon-box-title {
         text-align: center;
+        margin-bottom: 12px;
         
         @media (max-width: 1024px) {
             margin-bottom: 0;
@@ -9,6 +10,7 @@
 
     .elementor-icon-box-description {
         text-align: center;
+        margin-bottom: 24px;
 
         @media (max-width: 1024px) {
             margin-bottom: 10px;
@@ -22,28 +24,82 @@
             }
 
             .thmv-title {
-                margin-bottom: 4px !important;
                 width: 100%;
                 display: block;
                 max-width: unset !important;
                 text-align: center !important;
+                margin-bottom: 0 !important;
+                min-height: 35px;
+                line-height: 35px;
 
-                @media (max-width: 1024px) {
+                &, a{
                     font-size: 16px !important;
+                }
+
+                @media (max-width: 768px) {
+                    height: 30px;
+                    line-height: 30px;
+                    font-weight: 400;
+
+                    &, a {
+                        font-size: 14px !important;
+                    }
                 }
             }
 
             .thmv-preface {
-                font-weight: 700;
-                font-size: 16px;
-                line-height: 140%;
-                text-align: center;
                 vertical-align: middle;
                 margin: 0 !important;
+                background-color: #074365;
+                text-align: center;
+                color: #fff !important;
+                line-height: 41px;
+                font-family: Lato, sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+                display: block;
+                width: 100%;
+                height: 41px;
+                overflow: hidden;
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                    height: 35px;
+                    line-height: 35px;
+                }
+            }
+
+            .thmv-info {
+                margin-top: 0 !important;
+                background-color: #074365CC;
+                font-weight: 700;
+                font-size: 16px;
+                height: 35px;
+                overflow: hidden;
+                line-height: 35px;
+                text-align: center;
+                vertical-align: middle;
+                padding: 0 !important;
+                display: block;
+                width: 100%;
+
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    height: 30px;
+                    line-height: 30px;
+                    font-weight: 400;
+                }
+
+                &, a{
+                    color: #fff;
+                }
             }
         }
-        
-        
+
+        .thmv-column {
+            margin-bottom: 0 !important;
+        }
+
         @media (max-width: 1024px) {
             .thmv-column {
                 margin-bottom: 15px !important;
@@ -64,6 +120,10 @@
     @media (max-width: 1024px) {
         .th-btn-wrap {
             margin-top: 0 !important;
+        }
+
+        .elementor-container.elementor-column-gap-default {
+            width: 100% !important;
         }
     }
 }
