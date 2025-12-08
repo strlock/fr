@@ -2599,6 +2599,11 @@ class Themo_Widget_Accommodation_Listing_FR extends Widget_Base {
                         $imageAlignment = $showImgesRightSide ? 'image-column-right ' : '';
                     }
                     ?>
+                    <?php if (in_array($listingStyle, array(3, 4))): ?>
+                        <?php if (!empty($preface)): ?>
+                            <div class="thmv-preface"><?= $preface ?></div>
+                        <?php endif; ?>
+                    <?php endif; ?>
                     <div class="thmv-grid <?= $imageAlignment ?> elementor-element">
                         <div class="thmv-grid-img">
                             <?php if (!$carousel_switcher && !empty($renderedImage)): ?>
@@ -2701,11 +2706,6 @@ class Themo_Widget_Accommodation_Listing_FR extends Widget_Base {
                             <?php if (in_array($listingStyle, array(6)) && isset($titleSeparator)): ?>    
                                 <hr class="thmv-separator">
                             <?php endif; ?>    
-                            <?php if (in_array($listingStyle, array(3, 4))): ?>    
-                                <?php if (!empty($preface)): ?>
-                                    <div class="thmv-preface"><?= $preface ?></div>
-                                <?php endif; ?>
-                            <?php endif; ?>
                         <?php if (!empty($description)): ?>
                             <p class="thmv-description"><?= esc_html($description) ?></p>
                         <?php endif; ?>
@@ -2717,7 +2717,7 @@ class Themo_Widget_Accommodation_Listing_FR extends Widget_Base {
                             echo '<div class="listing-description">'.
                                        '<div>'.
                                            '<img src="'.site_url().'/wp-content/themes/bellevuex-child/images/icons/person.svg" />'.
-                                           '<span>'.$capacity.'<br/>Personen</span>'.
+                                           '<span>'.$capacity.' Personen</span>'.
                                        '</div>'.
                                        '<div>'.
                                            '<img src="'.site_url().'/wp-content/themes/bellevuex-child/images/icons/area.svg" />'.
