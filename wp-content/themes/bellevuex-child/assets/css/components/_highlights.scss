@@ -10,4 +10,10 @@
             max-width: unset !important;
         }
     }
+
+    @media (max-width: 768px) {
+        .elementor-section-boxed .elementor-container {
+            width: 100% !important;
+        }
+    }
 }
