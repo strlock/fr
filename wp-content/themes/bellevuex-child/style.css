@@ -107,32 +107,12 @@ h1, .h1 h1 {
 .startpage-top-1 .th-btn-wrap {
   margin-top: 0 !important;
 }
-@media (max-width: 576px) {
-  .startpage-top-1 .th-btn-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .startpage-top-1 .th-btn-wrap .btn {
-    width: 100% !important;
-    display: inline-flex;
-    justify-content: center !important;
-  }
-  .startpage-top-1 .th-btn-wrap .btn:after {
-    position: static;
-  }
-}
 .startpage-top-1 .btn-cta-primary {
   background-color: #2BB826 !important;
   position: relative;
   justify-content: flex-start !important;
   padding: 0 0 0 25px !important;
   margin-left: 15px !important;
-}
-@media (max-width: 576px) {
-  .startpage-top-1 .btn-cta-primary {
-    margin-left: 0 !important;
-  }
 }
 .startpage-top-1 .btn-cta-primary:after {
   width: 29px !important;
@@ -237,14 +217,6 @@ h1, .h1 h1 {
   line-height: 1;
   margin-bottom: 0 !important;
 }
-@media (max-width: 576px) {
-  .sp-search-form .th-fo-form .frm_form_field, .sp-search-form .th-fo-form .frm_submit {
-    width: 100% !important;
-  }
-  .sp-search-form .th-fo-form .frm_form_field select, .sp-search-form .th-fo-form .frm_form_field input, .sp-search-form .th-fo-form .frm_submit select, .sp-search-form .th-fo-form .frm_submit input {
-    width: 100% !important;
-  }
-}
 .sp-search-form input[type=text], .sp-search-form select {
   border: 1px solid #000 !important;
   color: #000 !important;
@@ -268,11 +240,6 @@ h1, .h1 h1 {
   line-height: 120%;
   vertical-align: middle;
   margin-bottom: 32px;
-}
-@media (max-width: 768px) {
-  .sp-special-offers h2 {
-    margin-bottom: 20px;
-  }
 }
 .sp-special-offers .elementor-widget-themo-accommodation-listing .thmv-column .thmv-info {
   margin-top: 12px !important;
@@ -424,11 +391,6 @@ h1, .h1 h1 {
 .sp-video .elementor-icon-box-description {
   margin-bottom: 40px;
 }
-@media (max-width: 768px) {
-  .sp-video .elementor-container.elementor-column-gap-no {
-    width: 100% !important;
-  }
-}
 
 .sp-blog p {
   margin: 0;
@@ -514,11 +476,6 @@ h1, .h1 h1 {
 }
 .sp-map .elementor-element-populated P {
   width: 100%;
-}
-@media (max-width: 768px) {
-  .sp-map .elementor-container.elementor-column-gap-default {
-    width: 100% !important;
-  }
 }
 
 .sp-reviews .elementor-testimonial {
@@ -643,6 +600,11 @@ footer .footer-payments .elementor-container {
   vertical-align: middle;
   margin: 0 !important;
 }
+@media (max-width: 1024px) {
+  .sp-adv .elementor-widget-themo-accommodation-listing .thmv-column {
+    margin-bottom: 15px !important;
+  }
+}
 .sp-adv .btn-1.btn.th-btn.btn-standard-primary {
   font-family: "Work Sans", sans-serif !important;
   font-weight: 700;
@@ -652,28 +614,9 @@ footer .footer-payments .elementor-container {
   vertical-align: middle;
   text-transform: uppercase;
 }
-@media (max-width: 768px) {
-  .sp-adv .btn-1.btn.th-btn.btn-standard-primary {
-    font-size: 14px;
-    height: 48px;
-    line-height: 16px;
-    padding: 0 10px;
-    text-transform: none;
-    margin: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-.sp-adv .adv-bottom-button .th-btn-wrap {
-  margin-top: 0;
-}
-.sp-adv .adv-bottom-button .elementor-icon-box-title, .sp-adv .adv-bottom-button .elementor-icon-box-description {
-  display: none;
-}
-@media (max-width: 576px) {
-  .sp-adv .elementor-widget-themo-accommodation-listing .elementor-row .thmv-column {
-    margin-bottom: 20px;
+@media (max-width: 1024px) {
+  .sp-adv .th-btn-wrap {
+    margin-top: 0 !important;
   }
 }
 
@@ -685,11 +628,6 @@ footer .footer-payments .elementor-container {
 @media (max-width: 1024px) {
   .sp-highlights .thmv-inner-container {
     max-width: unset !important;
-  }
-}
-@media (max-width: 768px) {
-  .sp-highlights .elementor-section-boxed .elementor-container {
-    width: 100% !important;
   }
 }
 
@@ -713,11 +651,6 @@ footer .footer-payments .elementor-container {
   }
   .sp-mtb .thmv-inner-container {
     max-width: unset !important;
-  }
-}
-@media (max-width: 768px) {
-  .sp-mtb .elementor-container.elementor-column-gap-no {
-    width: 100% !important;
   }
 }
 
