@@ -1,0 +1,18 @@
+/* Error: Undefined variable.
+ *   ,
+ * 4 | $image-aspect-ratio: var(--card-image-aspect-ratio, #{$ratio-portrait});
+ *   |                                                       ^^^^^^^^^^^^^^^
+ *   '
+ *   ..\..\modules\site-editor\assets\js\molecules\site-template.scss 4:55  @import
+ *   app-imports.scss 1:9                                                   root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 4 \2502  $image-aspect-ratio: var(--card-image-aspect-ratio, #{$ratio-portrait});\d\a   \2502                                                        ^^^^^^^^^^^^^^^\a   \2575 \a   ..\\..\\modules\\site-editor\\assets\\js\\molecules\\site-template.scss 4:55  @import\a   app-imports.scss 1:9                                                   root stylesheet";
+}

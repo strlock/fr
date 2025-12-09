@@ -1,0 +1,59 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 18-Nov-2021, 16:32:54
+    Author     : Abrar
+*/
+.elementor-panel div[class*=elementor-panel-menu-item-aloha-settings] {
+  background-color: #BAD344;
+  color: white;
+}
+.elementor-panel div[class*=elementor-panel-menu-item-aloha-settings]:hover {
+  background-color: rgba(186, 211, 68, 0.85);
+}
+.elementor-panel div[class*=elementor-panel-menu-item-aloha-settings] .eicon-tools:before {
+  color: white;
+}
+.elementor-panel .elementor-control-aloha-restore-kit .elementor-control-input-wrapper {
+  margin: auto !important;
+}
+.elementor-panel .elementor-control-aloha-restore-kit .elementor-control-input-wrapper button {
+  background-color: #df1f1f;
+}
+
+.themo-elementor-dark-mode #elementor-controls .elementor-control-th_dynamic_image,
+.themo-elementor-dark-mode #elementor-controls .elementor-control-th_thmv_section_title,
+.themo-elementor-dark-mode #elementor-controls .elementor-control-th_section_parallax,
+.themo-elementor-dark-mode #elementor-controls .elementor-control-th_dynamic_image {
+  padding-bottom: 0;
+}
+.themo-elementor-dark-mode #elementor-controls .elementor-control-th_dynamic_image .elementor-control-content,
+.themo-elementor-dark-mode #elementor-controls .elementor-control-th_thmv_section_title .elementor-control-content,
+.themo-elementor-dark-mode #elementor-controls .elementor-control-th_section_parallax .elementor-control-content,
+.themo-elementor-dark-mode #elementor-controls .elementor-control-th_dynamic_image .elementor-control-content {
+  padding: 20px 15px 0;
+  background-color: #34383c;
+}
+#elementor-controls .elementor-control-th_thmv_section_title .elementor-control-content {
+  color: #BAD344;
+}
+#elementor-controls .elementor-control-th_dynamic_image .elementor-control-title, #elementor-controls .elementor-control-th_section_parallax .elementor-control-title {
+  font-weight: 600;
+}
+.themo-elementor-dark-mode #elementor-controls .elementor-control-th_dynamic_image .elementor-switch-input:not(:checked) ~ .elementor-switch-label, .themo-elementor-dark-mode #elementor-controls .elementor-control-th_section_parallax .elementor-switch-input:not(:checked) ~ .elementor-switch-label {
+  background-color: #404349;
+}
+#elementor-controls .elementor-control-th_dynamic_image .elementor-switch-input:checked ~ .elementor-switch-label, #elementor-controls .elementor-control-th_section_parallax .elementor-switch-input:checked ~ .elementor-switch-label {
+  background-color: #BAD344;
+}
+#elementor-controls .elementor-control-th_dynamic_image {
+  padding-bottom: 20px !important;
+}
+.themo-elementor-dark-mode #elementor-controls .elementor-control-th_dynamic_image .elementor-control-content {
+  padding-bottom: 20px;
+}
+
+/*# sourceMappingURL=editor.css.map */
