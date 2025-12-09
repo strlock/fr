@@ -811,7 +811,7 @@
   z-index: 1;
 }
 .form-toggle__label .form-toggle__label-content {
-  color: #2e4453;
+  color: rgb(46.2909090909, 67.7090909091, 82.9090909091);
   flex: 0 1 100%;
   font-size: 13px;
   line-height: 16px;

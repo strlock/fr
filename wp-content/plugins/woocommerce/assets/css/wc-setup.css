@@ -10,10 +10,10 @@
   --wc-orange: #ffba00;
   --wc-blue: #2ea2cc;
   --wc-primary: #720eec;
-  --wc-primary-text: #fcfbfe;
+  --wc-primary-text: rgb(252.3245945946, 250.73, 254.27);
   --wc-secondary: #e9e6ed;
   --wc-secondary-text: #515151;
-  --wc-highlight: #958e09;
+  --wc-highlight: rgb(149.3408, 142.38, 8.8592);
   --wc-highligh-text: white;
   --wc-content-bg: #fff;
   --wc-subtext: #767676;
@@ -95,7 +95,7 @@ body {
   color: #720eec;
 }
 .wc-setup-content a:hover, .wc-setup-content a:focus {
-  color: #15032b;
+  color: rgb(20.976, 2.576, 43.424);
 }
 .wc-setup-content .form-table th {
   width: 35%;
@@ -316,8 +316,8 @@ body {
 }
 .wc-setup-content .wc-setup-next-steps ul .setup-product a.button-primary:hover, .wc-setup-content .wc-setup-next-steps ul .setup-product a.button-primary:focus, .wc-setup-content .wc-setup-next-steps ul .setup-product a.button-primary:active {
   color: #fff;
-  background: #7f22f2;
-  border-color: #7f22f2;
+  background: rgb(127.432, 33.632, 241.868);
+  border-color: rgb(127.432, 33.632, 241.868);
   box-shadow: none;
 }
 .wc-setup-content .wc-setup-next-steps ul li a::before {
@@ -517,8 +517,8 @@ body {
 .woocommerce-tracker .button-primary:hover,
 .woocommerce-tracker .button-primary:focus,
 .woocommerce-tracker .button-primary:active {
-  background: #7f22f2;
-  border-color: #7f22f2;
+  background: rgb(127.432, 33.632, 241.868);
+  border-color: rgb(127.432, 33.632, 241.868);
   box-shadow: 0 0 0;
 }
 
