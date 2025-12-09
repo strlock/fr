@@ -248,7 +248,6 @@ h1, .h1 h1 {
 .sp-search-form input[type=text], .sp-search-form select {
   border: 1px solid #000 !important;
   color: #000 !important;
-  background-color: #F2FAFF !important;
 }
 .sp-search-form input[type=text]::placeholder, .sp-search-form select::placeholder {
   color: #000 !important;
@@ -923,7 +922,6 @@ footer .footer-payments .elementor-container {
 }
 .sp-offers-1 .thmv-blog-post .thmv-column .thmv-info .post-title, .sp-offers-1 .thmv-blog-post .thmv-column .thmv-info .post-title a {
   font-size: 16px;
-  letter-spacing: 0%;
   text-align: center;
   vertical-align: middle;
   height: 39px;
