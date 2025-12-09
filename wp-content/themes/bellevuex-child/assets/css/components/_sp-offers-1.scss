@@ -124,4 +124,18 @@
     .elementor-widget {
         margin-block-end: unset !important;
     }
+
+    .sp-offers-1-2 {
+        .entry-content {
+            &, p {
+                font-weight: 400 !important;
+                font-size: 16px !important;
+                line-height: 140% !important;
+                vertical-align: middle !important;
+                text-align: center !important;
+                color: #000 !important;
+                font-family: "Lato", sans-serif !important;
+            }
+        }
+    }
 }

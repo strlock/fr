@@ -16,4 +16,26 @@
             width: 100% !important;
         }
     }
+
+    .sp-highlights__left {
+        .elementor-column {
+            max-width: 234px !important;
+        }
+
+        .elementor-container.elementor-column-gap-no {
+            justify-content: flex-end;
+            column-gap: 40px;
+        }
+
+        .elementor-icon-box-title {
+            margin-left: 0;
+            margin-right: 0;
+
+        }
+
+        .elementor-icon-box-description {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
 }
