@@ -269,6 +269,11 @@ h1, .h1 h1 {
   vertical-align: middle;
   margin-bottom: 12px;
 }
+@media (max-width: 1024px) {
+  .sp-special-offers h2 {
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 768px) {
   .sp-special-offers h2 {
     margin-bottom: 20px;
@@ -878,6 +883,19 @@ footer .footer-payments .elementor-container {
   }
 }
 
+.sp-offers-1 h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  vertical-align: middle;
+  margin-bottom: 12px;
+}
+@media (max-width: 1024px) {
+  .sp-offers-1 h2 {
+    margin-bottom: 0;
+  }
+}
 .sp-offers-1 .thmv-blog-post .thmv-column {
   margin-bottom: 54px;
 }
@@ -955,6 +973,27 @@ footer .footer-payments .elementor-container {
     padding-left: 10px !important;
     padding-right: 10px !important;
   }
+}
+.sp-offers-1 .sp-offers-1-1 .thmv-column {
+  margin-bottom: 0 !important;
+}
+.sp-offers-1 .elementor-divider {
+  padding-block-start: 0 !important;
+  padding-block-end: 0 !important;
+  margin: 41px 0 12px 0 !important;
+}
+@media (max-width: 1024px) {
+  .sp-offers-1 .elementor-divider {
+    margin: 30px 0 20px 0 !important;
+  }
+}
+@media (max-width: 768px) {
+  .sp-offers-1 .elementor-divider {
+    margin: 20px 0 15px 0 !important;
+  }
+}
+.sp-offers-1 .elementor-widget {
+  margin-block-end: unset !important;
 }
 
 @media (max-width: 1024px) {
