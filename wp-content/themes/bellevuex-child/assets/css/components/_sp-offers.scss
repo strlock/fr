@@ -1,5 +1,91 @@
 .sp-offers {
-    .elementor-widget-themo-accommodation-listing .elementor-row .thmv-column {
-        margin-bottom: 0 !important;
+    .thmv-blog-post {
+        .thmv-column {
+            margin-bottom: 54px;
+            
+            @media (max-width: 768px) {
+                margin-bottom: 20px !important;
+            }
+
+            .thmv-grid-img {
+                margin-bottom: 0;
+                z-index: 1;
+                position: relative;
+            }
+
+            .thmv-info {
+                margin-top: -39px;
+                z-index: 2;
+                position: relative;
+                margin-bottom: 0;
+                width: 100% !important;
+
+                .post-title {
+                    background-color: #074365CC;
+                    font-weight: 700;
+                    margin-bottom: 15px;
+
+                    &, a {
+                        font-size: 16px;
+                        letter-spacing: 0%;
+                        text-align: center;
+                        vertical-align: middle;
+                        height: 39px;
+                        line-height: 39px;
+                        overflow: hidden;
+                        color: #fff;
+                    }
+                }
+
+                .entry-content {
+                    max-width: 396px;
+                    margin: 0 auto 4px auto;
+
+                    &, p {
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 140%;
+                        vertical-align: middle;
+                        text-align: center;
+                        color: #000;
+                    }
+
+                    p {
+                        margin: 0;
+                    }
+                }
+
+                .thmv-learn-btn {
+                    font-family: Lato, sans-serif;
+                    font-weight: 700;
+                    font-style: Bold;
+                    font-size: 16px;
+                    line-height: 140%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    vertical-align: middle;
+                    text-decoration: underline;
+                    text-decoration-style: solid;
+                    text-decoration-thickness: 0%;
+                    text-decoration-skip-ink: auto;
+                    color: #074365;
+                    display: block;
+                    width: 100%;
+                    text-transform: lowercase;
+
+                    svg {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .elementor-container.elementor-column-gap-default {
+            width: 100% !important;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
     }
 }
