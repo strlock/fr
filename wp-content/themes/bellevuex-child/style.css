@@ -99,10 +99,10 @@ h1, .h1 h1 {
   font-weight: 700 !important;
 }
 .startpage-top-1 .elementor-icon-box-title {
-  margin: 0 0 7px 0 !important;
+  margin: 0 0 35px 0 !important;
 }
 .startpage-top-1 .elementor-icon-box-description {
-  margin: 0 0 30px 0 !important;
+  margin: 0 0 58px 0 !important;
 }
 .startpage-top-1 .th-btn-wrap {
   margin-top: 0 !important;
@@ -266,7 +266,7 @@ h1, .h1 h1 {
   font-size: 24px;
   line-height: 120%;
   vertical-align: middle;
-  margin-bottom: 12px;
+  margin-bottom: 9px;
 }
 @media (max-width: 1024px) {
   .sp-special-offers h2 {
@@ -324,7 +324,7 @@ h1, .h1 h1 {
   gap: 20px;
   font-size: 16px;
   color: #074365;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 }
 .elementor-widget-themo-accommodation-listing .listing-description div {
   display: flex;
@@ -345,13 +345,13 @@ h1, .h1 h1 {
   margin-bottom: 5px;
 }
 .sp-rooms .elementor-icon-box-description {
-  margin-bottom: 35px !important;
+  margin-bottom: 19px !important;
 }
 .sp-rooms .thmv-info {
   margin-top: 16px !important;
 }
 .sp-rooms .thmv-title {
-  margin-bottom: 15px !important;
+  margin-bottom: 9px !important;
 }
 .sp-rooms .elementor-widget-themo-accommodation-listing .elementor-row .thmv-column {
   margin-bottom: 20px;
@@ -428,9 +428,27 @@ h1, .h1 h1 {
 .sp-video .elementor-icon-box-description {
   margin-bottom: 40px;
 }
-@media (max-width: 768px) {
-  .sp-video .elementor-container.elementor-column-gap-no {
+@media (max-width: 1024px) {
+  .sp-video .elementor-container.elementor-column-gap-default, .sp-video .elementor-container.elementor-column-gap-no {
     width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .sp-video .sp-video-1 .elementor-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .sp-video .elementor-icon-box-description {
+    margin: 0 0 40px 0 !important;
+  }
+  .sp-video .elementor-icon-box-title {
+    margin: 0 0 24px 0 !important;
+  }
+  .sp-video .th-btn-wrap {
+    margin: 32px 0 0 0 !important;
+  }
+  .sp-video .th-btn-wrap .btn {
+    margin: 0 !important;
   }
 }
 
@@ -526,6 +544,12 @@ h1, .h1 h1 {
     padding-right: 10px !important;
   }
 }
+.sp-map .elementor-icon-box-description {
+  display: none;
+}
+.sp-map .elementor-icon-box-title {
+  margin-bottom: 30px;
+}
 
 .sp-reviews .elementor-testimonial {
   display: flex;
@@ -612,7 +636,7 @@ footer .footer-payments .elementor-container {
 
 .sp-adv .elementor-icon-box-title {
   text-align: center;
-  margin-bottom: 12px;
+  margin-bottom: 25px;
 }
 @media (max-width: 1024px) {
   .sp-adv .elementor-icon-box-title {
@@ -789,6 +813,9 @@ footer .footer-payments .elementor-container {
   margin-left: 0;
   margin-right: 0;
 }
+.sp-highlights .th-header-wrap .elementor-icon-box-icon {
+  margin-bottom: 10px !important;
+}
 
 @media (max-width: 1024px) {
   .sp-mtb .elementor-widget-image {
@@ -841,7 +868,7 @@ footer .footer-payments .elementor-container {
 .sp-offers .thmv-blog-post .thmv-column .thmv-info .post-title {
   background-color: rgba(7, 67, 101, 0.8);
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 .sp-offers .thmv-blog-post .thmv-column .thmv-info .post-title, .sp-offers .thmv-blog-post .thmv-column .thmv-info .post-title a {
   font-size: 16px;
@@ -896,6 +923,9 @@ footer .footer-payments .elementor-container {
     padding-right: 10px !important;
   }
 }
+.sp-offers .elementor-icon-box-description {
+  margin-bottom: 21px !important;
+}
 
 .sp-offers-1 h2 {
   text-align: center;
@@ -933,7 +963,7 @@ footer .footer-payments .elementor-container {
 .sp-offers-1 .thmv-blog-post .thmv-column .thmv-info .post-title {
   background-color: rgba(7, 67, 101, 0.8);
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 9px;
 }
 .sp-offers-1 .thmv-blog-post .thmv-column .thmv-info .post-title, .sp-offers-1 .thmv-blog-post .thmv-column .thmv-info .post-title a {
   font-size: 16px;
