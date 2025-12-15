@@ -7,19 +7,15 @@
         width: 100%;
     }
 
-    @media (max-width: 768px) {
-        .elementor-container.elementor-column-gap-default {
-            width: 100% !important;
-            padding-left: 10px !important;
-            padding-right: 10px !important;
-        }
-    }
-
     .elementor-icon-box-description {
         display: none;
     }
 
     .elementor-icon-box-title {
         margin-bottom: 30px;
+
+        @media (max-width: 1024px) {
+            margin-bottom: 9px !important;
+        }
     }
 }

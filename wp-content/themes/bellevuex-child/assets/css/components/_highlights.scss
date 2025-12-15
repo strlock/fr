@@ -20,6 +20,11 @@
     .sp-highlights__left {
         .elementor-column {
             max-width: 234px !important;
+
+            @media (max-width: 1024px) {
+                max-width: 100% !important;
+                width: calc(50% - 20px) !important;
+            }
         }
 
         .elementor-container.elementor-column-gap-no {

@@ -11,6 +11,10 @@ use Elementor\Plugin;
 
 final class FR {
     public function __construct() {
+		if (!defined('FR_THEME_PATH')) {
+			return;
+		}
+		
         add_action( "elementor/widget/posts/skins_init", function($widget) {
             $widget->add_skin( new ElementorPro\Modules\Posts\Skins\Skin_FR( $widget ) );
         }, 11);
