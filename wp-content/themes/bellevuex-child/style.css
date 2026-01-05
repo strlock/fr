@@ -614,8 +614,6 @@ h1, .h1 h1 {
 @media (max-width: 1024px) {
   .sp-header {
     width: 100% !important;
-    -webkit-box-shadow: 0px -1px 8px -1px #000000;
-    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
   }
   .sp-header .elementor-column-gap-no {
     width: 100% !important;
@@ -798,12 +796,6 @@ footer .footer-payments .elementor-container {
   .sp-highlights .sp-highlights__left .elementor-column {
     max-width: 100% !important;
     width: calc(50% - 20px) !important;
-  }
-}
-@media (max-width: 768px) {
-  .sp-highlights .sp-highlights__left .elementor-column {
-    max-width: 100% !important;
-    width: 100% !important;
   }
 }
 .sp-highlights .sp-highlights__left .elementor-container.elementor-column-gap-no {

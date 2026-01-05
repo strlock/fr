@@ -14,7 +14,6 @@ class Themo_Widget_Accommodation_Search extends Themo_Widget_Accommodation_Listi
     public function __construct($data = [], $args = null) {
         parent::__construct($data, $args);
         $this->is_preview = isset($_REQUEST['action']) && in_array($_REQUEST['action'], ['elementor', 'elementor_ajax']) ? 1 : 0;
-        $this->is_preview = true;
         add_filter('mphb_search_available_rooms', function ($arr) {
             $this->searchParams = $arr;
             $checkInDate = $checkOutDate = '';

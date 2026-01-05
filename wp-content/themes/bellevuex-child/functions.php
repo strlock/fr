@@ -1,6 +1,4 @@
 <?php
-define('FR_THEME_PATH', ABSPATH . "wp-content/themes/bellevuex-child/");
-
 // Hook the function to the 'wp_enqueue_scripts' action
 add_action( 'wp_enqueue_scripts', function(){
     // Register the script
