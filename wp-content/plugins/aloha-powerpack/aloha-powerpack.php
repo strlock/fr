@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: Aloha PowerPack
- * Version: 1.2.13
+ * Version: 1.2.14
  * Plugin URI: https://help.bellevuetheme.com/
  * Description: Elementor PowerPack for Hotels and Vacation Rentals
  * Author: PixelMakers
@@ -599,3 +599,22 @@ add_action( 'admin_init', function(){
         }
     }
 }, 10 );
+
+add_action( 'wp', function() {
+
+    // Outside Elementor preview? MotoPress handles it automatically.
+    if ( ! isset( $_GET['elementor-preview'] ) ) {
+        return;
+    }
+
+    $room_type_pt = MPHB()->postTypes()->roomType()->getPostType();
+    $post_id = get_queried_object_id();
+    if ( $post_id ) {
+        $post = get_post( $post_id );
+
+        // Only set the room type if the post really is a room type
+        if ( $post && $post->post_type === $room_type_pt ) {
+            MPHB()->setCurrentRoomType( $post );
+        }
+    }
+});
