@@ -38,6 +38,49 @@ final class FR {
             }
             return $allcaps;
         }, 10, 3 );
+
+        add_shortcode( 'meta', function ( $atts ) {
+            // Настройки по умолчанию
+            $a = shortcode_atts( array(
+                'key' => '',            // Ключ мета-поля (обязательно)
+                'id'  => get_the_ID(),  // ID поста (если не указан, берет текущий)
+            ), $atts );
+
+            // Если ключ не указан, ничего не возвращаем
+            if ( empty( $a['key'] ) ) {
+                return '';
+            }
+
+            // Получаем значение
+            $value = get_post_meta( $a['id'], $a['key'], true );
+
+            // Если значения нет, ничего не выводим
+            if ( ! $value ) {
+                return '';
+            }
+
+            return esc_html( $value );
+        } );
+
+        add_shortcode( 'mphb_total_capacity', function ( $atts ) {
+            // Настройки по умолчанию
+            $a = shortcode_atts( array(
+                'id'  => get_the_ID(),  // ID поста (если не указан, берет текущий)
+            ), $atts );
+
+            // Получаем значение
+            $value = (int)get_post_meta( $a['id'], 'mphb_total_capacity', true );
+
+            // Если значения нет, ничего не выводим
+            if ( ! $value ) {
+                // Получаем значение
+                $mphb_adults_capacity = (int)get_post_meta( $a['id'], 'mphb_adults_capacity', true );
+                $mphb_children_capacity = (int)get_post_meta( $a['id'], 'mphb_children_capacity', true );
+                $value = $mphb_adults_capacity + $mphb_children_capacity;
+            }
+
+            return $value ;
+        } );
     }
 }
 

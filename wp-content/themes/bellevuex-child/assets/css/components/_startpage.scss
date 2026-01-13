@@ -12,6 +12,13 @@
 }
 
 #thhf-masthead.transparent-header {
+    position: relative !important;
+}
+
+.home {
+    #thhf-masthead.transparent-header {
+        position: absolute !important;
+    }
 }
 
 .startpage-top-1 {
