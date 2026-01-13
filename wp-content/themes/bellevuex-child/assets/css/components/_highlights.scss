@@ -25,6 +25,11 @@
                 max-width: 100% !important;
                 width: calc(50% - 20px) !important;
             }
+
+            @media (max-width: 768px) {
+                max-width: 100% !important;
+                width: 100% !important;
+            }
         }
 
         .elementor-container.elementor-column-gap-no {
